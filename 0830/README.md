@@ -17,10 +17,8 @@
 - 이 경우 닫는 태그를 추가로 명시하지 않아도 된다.
 - Empty element, Self-Closing element, Void element, Single tag 등
 
-```
-<br>
+```<br>
 <hr>
 <img src="https://image.url/images/icon.jpg">
 <meta charset="utf-8">
-<input type="text" name="name">
-```
+<input type="text" name="name">```
