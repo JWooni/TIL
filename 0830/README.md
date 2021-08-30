@@ -62,7 +62,7 @@
 </html>
 ```
 
-- "<!DOCTYPE html>"
+- ```html<!DOCTYPE html>```
 - html : 페이지 전체의 컨텐츠를 감싸는 루트(root)요소
     - head : 웹브라우저 화면에 직접적으로 나타나지 않는 웹페이지의 정보
         - meta tag : 문서의 일반적인 정보와 문자 인코딩을 명시
