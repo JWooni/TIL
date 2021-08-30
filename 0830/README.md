@@ -141,14 +141,14 @@
 
 ### META - 문자 인코딩, 뷰포트
 
-- **charset**
+- <u>charset</u>
     - 페이지의 문자 인코딩을 선언. 이 특성이 존재할 경우, 그 값은 반드시 문자열 "utf-8"의 대소문자 구분 없는 ASCII 표현이어야 한다.
 
     ```html
     <meta charset="UTF-8" />
     ```
 
-- **viewport**
+- <u>viewport</u>
     - 뷰포트의 초기 사이즈에 대한 힌트. 모바일 장치에서만 사용한다.  
     - ```<meta name= "viewport">```의 값
 ```html
