@@ -437,3 +437,47 @@ C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>,
 ```
 <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
 ```
+
+---
+
+## ```<a>```
+
+**HTML ```<a>``` 요소**(앵커 요소)는 **```href```** 특성을 통해 다른 페이지나 같은 페이지의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 만든다. ```<a>``` 안의 콘텐츠는 링크 목적지의 설명을 **나타내야 한다**.
+
+```html
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+### **download**
+
+링크로 이동하는 대신 사용자에게 URL을 저장할지 물어봅니다. 값을 지정할 수도 있고, 지정하지 않을 수도 있다.
+
+### **href**
+
+하이퍼링크가 가리키는 URL. 링크는 HTTP 기반 URL일 필요는 없고, 브라우저가 지원하는 모든 URL 스킴을 사용할 수 있다.
+
+### **hreflang**
+
+링크 URL의 인간 언어에 대한 힌트. 특별한 내장 기능은 없다. 가능한 값은 전역 ```lang``` 특성과 동일하다.
+
+### **ping**
+
+하나의 스페이스로 구분하는 URL 목록. 링크를 클릭해 따라갈 경우, 브라우저가 URL 각각에 ```POST``` 요청을 전송한다. 대개 추적 용도로 사용한다.
+
+### **referrerpolicy**
+
+URL을 가져올 때 사용할 리퍼러.
+
+### **rel**
+
+하나의 스페이스로 구분하는, 연결한 URL과의 관계를 나타내는 링크 유형 목록.
+
+### **target**
+
+링크한 URL을 표시할 위치. 가능한 값은 브라우징 맥락으로, 즉 탭, 창, ```<iframe>```의 이름이나 특정 키워드.
