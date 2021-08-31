@@ -1,9 +1,9 @@
 ## ```<h1> - <h6>``` : HTML 구획 제목 요소
 
-```HTML <h1> - <h6>``` 요소는 6단계의 구획 제목을 나타낸다.
+``` <h1> - <h6>``` 요소는 6단계의 구획 제목을 나타낸다.
 구획 단계는 ```<h1>```이 가장 높고 ```<h6>```은 가장 낮다.
 
-```html
+```
 <h1> Beetles</h1>
 	<h2>External morphology</h2>
 		<h3> Head </h3>
@@ -20,11 +20,11 @@
 ## 사용 일람
 
 - 사용자 에이전트가 제목의 정보를 사용해 자동으로 문서 콘텐츠의 표를 만드는 등의 작업을 수행할 수 있다.
-- 글씨 크기를 위해 제목 태그를 사용하지 않는다. 대신 [CSS](https://developer.mozilla.org/ko/docs/Glossary/CSS)의 `[font-size](https://developer.mozilla.org/ko/docs/Web/CSS/font-size)` 속성을 사용.
-- 제목 단계를 건너뛰는 것을 피한다. 언제나 `<h1>`로 시작해서, `<h2>,` 순차적으로 기입한다.
-- 페이지 당 하나의 `<h1>`만 사용한다. 여러 개를 써도 오류는 나지 않겠지만, 단일 `<h1>`이 모범 사례로 꼽힌다. 논리적으로 생각했을 때도, `<h1>`은 가장 중요한 제목이므로 전체 페이지의 목적을 설명해야 할 것. 두 개의 제목을 가진 책이나, 여러 개의 이름을 가진 영화는 볼 수 없다! 또한 스크린 리더 사용자와 [SEO](https://developer.mozilla.org/ko/docs/Glossary/SEO)에도 더 적합하다.
+- 글씨 크기를 위해 제목 태그를 사용하지 않는다.
+- 제목 단계를 건너뛰는 것을 피한다. 언제나 ```<h1>```로 시작해서, ```<h2>,``` 순차적으로 기입한다.
+- 페이지 당 하나의 ```<h1>```만 사용한다. 여러 개를 써도 오류는 나지 않겠지만, 단일 ```<h1>```이 모범 사례로 꼽힌다. 논리적으로 생각했을 때도, ```<h1>```은 가장 중요한 제목이므로 전체 페이지의 목적을 설명해야 할 것. 두 개의 제목을 가진 책이나, 여러 개의 이름을 가진 영화는 볼 수 없다. 
 
-```html
+```
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -46,7 +46,7 @@
 
 ## 예제
 
-```html
+```
 <h1>Heading elements</h1>
 <h2>Summary</h2>
 <p>Some text here...</p>
@@ -154,7 +154,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 **HTML `<figure>` 요소**는 독립적인 콘텐츠를 표현한다. `<figcaption>` 요소를 사용해 설명을 붙일 수 있다. 피규어, 설명, 콘텐츠는 하나의 단위로 참조된다.
 
-```html
+```
 <figure>
     <img src="/media/cc0-images/elephant-660-480.jpg"
          alt="Elephant at sunset">
@@ -168,7 +168,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 **HTML `<figcaption>` 요소는** 부모 `<figure>` 요소가 포함하는 다른 콘텐츠에 대한 설명 혹은 범례를 나타낸다.
 
-```html
+```
 <figure>
     <img src="/media/cc0-images/elephant-660-480.jpg"
          alt="Elephant at sunset">
@@ -182,7 +182,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 **HTML `<hr>` 요소**는 이야기 장면 전환, 구획 내 주제 변경 등, 문단 레벨 요소에서 주제의 분리를 나타낸다.
 
-```html
+```
 <p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
 
 <hr>
@@ -210,7 +210,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 **HTML `<address>` 요소**는 가까운 HTML 요소의 사람, 단체, 조직 등에 대한 연락처 정보를 나타낸다.
 
-```html
+```
 <p>Contact the author of this page:</p>
 
 <address>
@@ -225,7 +225,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 **HTML `<cite>` 요소**는 저작물의 출처를 표기할 때 사용하며, 제목을 반드시 포함해야 한다. 적절한 맥락 아래에서는 출처를 축약해서 표기할 수 있다.
 
-```html
+```
 <figure>
     <blockquote>
         <p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
@@ -240,7 +240,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 **HTML `<bdo>` 요소**는 현재 텍스트의 쓰기 방향을 덮어쓰고 다른 방향으로 렌더링 할 때 사용한다.
 
-```html
+```
 <h1>Famous seaside songs</h1>
 
 <p>The English song "Oh I do like to be beside the seaside"</p>
@@ -258,7 +258,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 원래는 "굵은 글씨 요소"로 불렸으며, 대부분의 브라우저도 여전히 텍스트를 굵은 글씨체로 강조한다. 그러나 `<b>`를 사용해 텍스트를 꾸미면 안된다. 대신 CSS `[font-weight](https://developer.mozilla.org/ko/docs/Web/CSS/font-weight)`를 사용해 굵은 글씨체를 적용하거나, `[<strong>](https://developer.mozilla.org/ko/docs/Web/HTML/Element/strong)` 요소를 사용해 특별히 중요한 텍스트를 나타낸다.
 
-```html
+```
 <p>The two most popular science courses offered by the school are
  <b class="term">chemistry</b> (the study of chemicals and the composition of substances)
  and <b class="term">physics</b> (the study of the nature and properties of matter and energy).</p>
@@ -272,7 +272,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 보통 브라우저는 굵은 글씨로 표시한다.
 
-```html
+```
 <p>... the most important rule, the rule you can never forget,
  no matter how much he cries, no matter how much he begs:
  <strong>never feed him after midnight</strong>.
@@ -289,7 +289,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 보통 기울임꼴로 표시한다.
 
-```html
+```
 <p>I looked at it and thought <i>This can't be real!</i></p>
 
 <p><i class="latin">Musa</i> is one of two or three genera in the family <i class="latin">Musaceae</i>; it includes bananas and plantains.</p>
@@ -305,7 +305,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
  `<em>` 요소를 중첩하면 더 큰 강세를 뜻하게 된다.
 
-```html
+```
 <p>Get out of bed <em>now</em>!</p>
 
 <p>We <em>had</em> to do something about it.</p>
@@ -319,7 +319,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 **HTML `<mark>` 요소**는 현재 맥락에 관련이 깊거나 중요해 표시 또는 하이라이트한 부분을 나타낸다.
 
-```html
+```
 <p>Search results for "salamander":</p>
 
 <hr>
@@ -341,7 +341,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 기본 상태에서 `<small>`은 자신의 콘텐츠를 한 사이즈 작은 글꼴(`small`에서 `x-small` 등)로 표시하지만, 스타일을 적용한 후에도 글씨 크기가 작을 필요는 없다.
 
-```html
+```
 <p>MDN Web Docs is a learning platform for Web technologies and the software that powers the Web.</p>
 
 <hr>
@@ -357,7 +357,7 @@ HTML <br> 요소는 텍스트 안에 줄바꿈(캐리지 리턴)을 생성한다
 
 아래 첨자는 보통 더 작은 글씨 크기를 가지고, 기준선을 아래로 내려 렌더링 한다.
 
-```html
+```
 <p>Almost every developer's favorite molecule is
 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>,
  also known as "caffeine."
@@ -372,7 +372,7 @@ C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>,
 
  위 첨자는 보통 더 작은 글씨 크기를 가지고, 기준선을 위로 올려 렌더링 한다.
 
-```html
+```
 <p>The
  <b>Pythagorean theorem</b> is often expressed as the following equation:
 </p>
@@ -392,7 +392,7 @@ C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>,
 
  `<ins>` 요소를 추가된 텍스트의 범위를 나타낼 수 있다.
 
-```html
+```
 <blockquote>
     There is <del>nothing</del> <ins>no code</ins> either good or bad, but <del>thinking</del> <ins>running it</ins> makes it so.
 </blockquote>
@@ -406,7 +406,7 @@ C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>,
 
  `<del>` 요소를 사용하면 삭제된 텍스트의 범위를 나타낼 수 있다.
 
-```html
+```
 <p>“You're late!”</p>
 <del>
     <p>“I apologize for the delay.”</p>
@@ -422,7 +422,7 @@ C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>,
 
 **HTML `<code>` 요소**는 짧은 코드 조각을 나타내는 스타일을 사용해 자신의 콘텐츠를 표시한다. 
 
-```html
+```
 <p>The
  <code>push()</code> method adds one or more elements to the end of an array and returns the new length of the array.
 </p>
@@ -434,6 +434,6 @@ C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>,
 
 **HTML `<kbd>` 요소**는 키보드 입력, 음성 입력 등 임의의 장치를 사용한 사용자의 입력을 나타낸다. 
 
-```html
+```
 <p>Please press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>R</kbd> to re-render an MDN page.</p>
 ```
