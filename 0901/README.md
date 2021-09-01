@@ -1,6 +1,6 @@
 # 선행
 
-# 목록과 표
+# 목록와 표
 
 ```html
 <h2>Ordered List</h2>
