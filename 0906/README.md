@@ -263,3 +263,46 @@ a[href*="example"] {
         background-color: indianred;
     }
     ```
+- :link : 방문 전 링크 상태
+    - 링크를 가진 a요소에 적용한다. (href="" 가 없는 a는 적용되지 않는다.)
+
+    ```css
+    a:link {
+    	color: red;
+    }
+    ```
+
+- :visited : 방문 후 링크 상태
+- :hover : 마우스 오버 했을 때 적용한다. 링크 뿐만 아니라 모든 요소에 적용할 수 있다.
+- :active : 마우스를 클릭했을 때 상태
+- 스타일 적용 순서 : link → visited → hover → active 순 (순서대로 하지 않을 경우, 제대로 적용이 안 될 수 있음)
+
+- :checked : 체크 상태의 `input` 태그를 선택
+- :focus : `<input>` 같은 요소에 커서 위치해 선택된 동안의 스타일 지정
+- :enabled : 사용 가능한 `input` 태그를 선택
+- :disabled : 사용 불가능한 `input` 태그를 선택
+
+### 가상 요소 선택자
+
+1. ```::before``` , ```::after```
+    - 내용의 일부만 선택해 스타일을 적용할 때 사용
+    - 가상 클래스와 구별하기 위해 클래스 이름 앞에 콜론 두개(::)를 붙여 표시한다.
+        - 콜론 하나를 붙여도 브라우저에서는 가상 요소로 인식하지만, 웹 브라우저 익스플로러에서는 인식이 되지 않을 수 있다.
+    - 가상 요소는 인라인 요소이므로, 특정 영역을 갖기 위해서는 css에서 ```display: block;``` 을 사용한다.
+    - ::before, ::after가 필요한 경우
+        - 홈페이니 헤더나 푸터에 구분선을 삽입할 때
+            - 로그인 | 회원가입 | 마이페이지 ...
+    - 특정 요소의 앞(```::before``` )이나 뒤(```::after``` )에 지정한 내용(text or image)를 추가할 수 있다.
+    - content 속성을 반드시 작성해주어야 한다. before와 after와 함께 쓰이는 가짜 속성이다.
+        - normal : 아무 것도 표시하지 않는 기본값
+        - string : 문자열 생성
+        - image : 이미지나 비디오를 불러올 수 있으나, 크기 조절 불가능
+        - none: 아무것도 표시 안 함
+        - attr : 해당 속성의 속성값 표시
+
+2. ```first-letter``` , `first-line` , `selection`
+    - `first-letter` : 요소의 첫 번째 문자를 선택하는 선택자이며, 블록 요소에만 적용할 수 있다.
+    - `first-line` : 지정요소의 첫 번째 줄 선택
+    - `selection` : 요소 내에서 사용자가 더블클릭 또는 드래그해서 선택한 부분을 의미
+        - ::selection 선택자엔 아래 4가지 속성만 사용 가능.
+            - color, background, cursor, outline
