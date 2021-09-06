@@ -194,62 +194,72 @@ a[href*="example"] {
 ```
 
 1. 가장 클래스 선택자
-    1. :first-child
+- :first-child
 
-        :first-child 클래스는 형제 요소 중 제일 첫 요소를 나타낸다.
+    :first-child 클래스는 형제 요소 중 제일 첫 요소를 나타낸다.
 
-        ```css
-        li:first-child {
-            color: green;
-        }
-        ```
+    ```css
+    li:first-child {
+        color: green;
+    }
+    ```
 
-    2. :last-child
+- :last-child
 
-        :last-child 클래스는 형제 요소 그룹 중 마지막 요소를 나타낸다.
+    :last-child 클래스는 형제 요소 그룹 중 마지막 요소를 나타낸다.
 
-        ```css
-        span:last-child {
-            color: tomato;
-        }
-        ```
+    ```css
+    span:last-child {
+        color: tomato;
+    }
+    ```
 
-    3. :nth-child()
+- :nth-child()
 
-        :nth-child() 클래스는 형제 사이에서의 순서에 따라 요소를 선택한다.
+    :nth-child() 클래스는 형제 사이에서의 순서에 따라 요소를 선택한다.
 
-        ```css
-        li:nth-child(3) {
-            color: hotpink;
-        }
-        ```
+    ```css
+    li:nth-child(3) {
+        color: hotpink;
+    }
+    ```
 
-    4. :first-of-type
+- :first-of-type
 
-        :first-of-type 클래스는 형제 요소 중 자신의 유형과 일치하는 제일 첫 요소를 나타낸다.
+    :first-of-type 클래스는 형제 요소 중 자신의 유형과 일치하는 제일 첫 요소를 나타낸다.
 
-        ```css
-        p:first-of-type {
-            color: red;
-        }
-        ```
+    ```css
+    p:first-of-type {
+        color: red;
+    }
+    ```
 
-    5. :last-of-type
+- :last-of-type
 
-        :last-of-type 클래스는 형제 요소 그룹 중 해당 유형의 마지막 요소를 나타낸다.
+    :last-of-type 클래스는 형제 요소 그룹 중 해당 유형의 마지막 요소를 나타낸다.
 
-        ```css
-        p:last-of-type {
-            color: blue;
-        }
-        ```
+    ```css
+    p:last-of-type {
+        color: blue;
+    }
+    ```
 
-    6. :nth-last-of-type()
+- :nth-last-of-type()
 
-        :nth-last-of-type() 클래스는 형제 자매의 그룹 사이에서 자신의 위치를 기반으로 지정된 유형 (태그 이름)의 요소를 선택한다.
+    :nth-last-of-type() 클래스는 형제 자매의 그룹 사이에서 자신의 위치를 기반으로 지정된 유형 (태그 이름)의 요소를 선택한다.
 
-        ```css
-        p:nth-of-type(even) {
-            color: blue;
-        }
-        ```
+    ```css
+    p:nth-of-type(even) {
+        color: blue;
+    }
+    ```
+
+- :not()
+
+    :not(X)는 인수로 간단한 선택자(selector) X를 취하는 기능 표기법이다. 인수로 표시되지 않은 요소와 일치한다.
+
+    ```css
+    input:not(.pw) {
+        background-color: indianred;
+    }
+    ```
