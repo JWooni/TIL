@@ -7,7 +7,7 @@
 - CSS는 어떻게 생겼을까
 
 ```html
-				<h1>Welcome!</h1>
+	<h1>Welcome!</h1>
         <ul>
             <li>Toy Story</li>
             <li>Zootopia</li>
