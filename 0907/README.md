@@ -1,3 +1,77 @@
+# 폰트 관련 속성
+
+## font-size:
+
+- font-size는 글자 크기를 정하는 속성.
+- 숫자+단위로 사용
+- 브라우저의 기본값은 16px
+
+```css
+div {
+	font-size: 50px;
+}
+```
+
+## font-style:
+
+- 보통 이탤릭체를 사용하기 위해 많이 사용한다.
+- 기본값은 normal
+
+```css
+.normal {
+    font-style: normal;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.oblique {
+    font-style: oblique;
+}
+```
+
+## font-weight:
+
+- 폰트의 굵기 지정
+- 기본값은 normal(400, initial)
+- 상속이 가능하다.
+
+```css
+.normal {
+    font-weight: normal;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+```
+
+## font-family:
+
+- 글꼴 설정
+- 여러 개를 나열해서 사용할 경우, 콤마를 사용하여 나열하며 사용자의 os에 있는 폰트부터 사용한다.
+
+```css
+font-family: Georgia, "Times New Roman", serif;
+```
+
+- `line-height`
+    - 폰트의 위, 아래 (줄) 간격 설정
+
+### font와 단축속성(shorthand)
+
+- font {} 로 단축속성을 사용하여 한 줄로 작성할 경우, `font-size`와 **font-family**는 포함해야한다.
+- `font-style`, `font-variant`, `font-weight`, `line-height` 는 필수 속성은 아니며, 초기 값으로 설정된다.
+- `font-style`, `font-variant`, `font-weight`는 `font-size`의 **앞**에 와야 한다.
+- `font-variant`는 CSS 2.1에서 정의한 `normal`과 `small-caps`만 사용할 수 있다.
+- `line-height`는 `font-size` 바로 다음에 와야 하며 "/"로 구분해야 한다. (예: `16px/3)`
+- `font-family`는 마지막 값이어야 한다.
+
 ### 폰트 간격 설정
 
 `letter-spacing`
