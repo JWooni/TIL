@@ -155,7 +155,7 @@ text-transform: none | capitalize | uppercase | lowercase | initial | inherit
         - 1rem === root의 font-size
         - 계단식이 아닌 root의 요소에서 영향을 받기 때문에 상대 길이 단위 작업을 크게 단순화한다.
 - **뷰포트 백분율 길이 - vw, vh, vmin, vmax**
-    - ***viewport***란?
+    - viewport란?
         - *현재 화면에 보여지고 있는 다각형(보통 직사각형)의 영역을 뜻하며, 웹 브라우저에서는 현재 창에서 문서를 볼 수 있는 부분을 말한다.*
         - 보통 viewport는 device-width와 initial-scale=1.0로 많이 설정한다.
     - `vw`
