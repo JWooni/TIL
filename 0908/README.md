@@ -178,11 +178,11 @@ p {
 
 - position 속성은 문서 상에 요소를 배치하는 방법을 지정한다.
 - Position 속성 값은 5가지가 존재한다.
-  1. **static**: Position 속성 값으로 아무 것도 지정하지 않는 경우 default 값으로 사용된다. CSS의 Normal-flow(자세한 건 뒤에서 설명)에 따라 배치된다.
-  2. **absolute**: 부모 요소(태그) 위치의 상대값에 따라 배치된다. 단, 부모 요소가 static인 경우에는 조상(ancestor) 요소의 position속성이 static이 아닐 때까지 거슬러 올라가 배치된다. absoulte로 정의된 요소는 CSS Normal-flow의 흐름에서 배제된다.
-  3. **relative**: 자신이 원래 있어야 할 위치의 상대값(offset)에 따라 배치된다. offset은 top,left,right,bottom속성값을 활용한다. 즉 “left:20px”이라고 정의되면 원래 있어야할 좌측 위치에서 20px떨어진 곳에 위치하는 것이다.offset을 지정하지 않으면 static과 동일한 기능을 수행한다.
-  4. **fixed**: 브라우저의 창에 상대적인 위치(offset)에 보이도록 한다. 즉, 화면 스크롤과 상관없이 항상 화면의 정해진 위치에 정보가 나타난다.
-  5. **inherit**: 부모 element의 position속성을 물려받는다. **IE7까지는 지원하지 않으므로 해당브라우저를 고려해야 하는 경우는 사용하지 않도록 한다.**
+ 1. **static**: Position 속성 값으로 아무 것도 지정하지 않는 경우 default 값으로 사용된다. CSS의 Normal-flow(자세한 건 뒤에서 설명)에 따라 배치된다.
+ 2. **absolute**: 부모 요소(태그) 위치의 상대값에 따라 배치된다. 단, 부모 요소가 static인 경우에는 조상(ancestor) 요소의 position속성이 static이 아닐 때까지 거슬러 올라가 배치된다. absoulte로 정의된 요소는 CSS Normal-flow의 흐름에서 배제된다.
+ 3. **relative**: 자신이 원래 있어야 할 위치의 상대값(offset)에 따라 배치된다. offset은 top,left,right,bottom속성값을 활용한다. 즉 “left:20px”이라고 정의되면 원래 있어야할 좌측 위치에서 20px떨어진 곳에 위치하는 것이다.offset을 지정하지 않으면 static과 동일한 기능을 수행한다.
+ 4. **fixed**: 브라우저의 창에 상대적인 위치(offset)에 보이도록 한다. 즉, 화면 스크롤과 상관없이 항상 화면의 정해진 위치에 정보가 나타난다.
+ 5. **inherit**: 부모 element의 position속성을 물려받는다. **IE7까지는 지원하지 않으므로 해당브라우저를 고려해야 하는 경우는 사용하지 않도록 한다.**
 
     # Normal Flow
 
