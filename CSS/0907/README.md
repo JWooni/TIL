@@ -427,7 +427,7 @@ margin: unset;
     </style>
 ```
 
-## Border Width
+## border-width
 
 - `border-width` 속성은 테두리의 너비를 설정하는 데 사용된다.
 - 폭은 pixels 단위로  또는 세 개의 사전 정의 된 값(thin, medium, or thick)들 중 하나를 사용하여 설정한다.
@@ -450,7 +450,7 @@ p.three {
 }
 ```
 
-# Border Color
+# border-color
 
 `border-color` 속성은 테두리의 색상을 설정하는 데 사용된다. color 는 다음과 같이 설정될 수 있다.
 
