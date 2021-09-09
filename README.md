@@ -1,5 +1,5 @@
-## TIL
-### DAILY STUDY DOCUMENT
+# TIL
+## DAILY STUDY DOCUMENT
 
 ### 목차
 - [HTML](./HTML)
