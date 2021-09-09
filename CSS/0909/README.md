@@ -11,7 +11,7 @@
     ```css
     /* 16진수 */
     .hexadecimal {
-        background-color: rgb(80, 80, 150);
+        background-color: #09C;
     }
     ```
 
