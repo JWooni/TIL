@@ -1,4 +1,4 @@
-## zero-base
+## TIL
 ### DAILY STUDY DOCUMENT
 
 ### 목차
