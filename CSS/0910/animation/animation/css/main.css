@@ -1,0 +1,153 @@
+/* 
+	Animation (애니메이션)
+
+	@keyframes
+*/
+
+div {
+	width: 100px;
+	height: 100px;
+	border: 10px solid silver;
+	border-radius: 30px;
+}
+
+.box1 {
+	background-color: rgb(204, 253, 225);
+	animation: my-first-animation 1s infinite;
+	animation-delay: -0.3s;
+}
+.box2 {
+	background-color: rgb(255, 251, 198);
+	animation: my-first-animation 1s infinite;
+	animation-delay: 0;
+}
+.box3 {
+	background-color: rgb(245, 204, 253);
+	animation: my-first-animation 1s infinite;
+	animation-delay: .3s;
+	
+}
+
+.box:hover {
+	animation: my-first-animation 2s infinite;
+}
+
+@keyframes my-first-animation {
+	0% {
+		font-size: 20px;
+	}
+	50% {
+		width: 300px;
+		font-size: 30px;
+	}
+	100% {
+		font-size: 20px;
+	} 
+}
+
+/* animation-iteration-count */
+div.animation-iteration-count {
+	width: 100px;
+	height: 100px;
+	border: 10px solid silver;
+	border-radius: 50%;
+	background-color: rgb(126, 114, 236);
+}
+
+.animation-iteration-count {
+	animation-name: rotate;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* animation-direction */
+div.animation-direction {
+	width: 100px;
+	height: 100px;
+	border: 10px solid silver;
+	border-radius: 50%;
+	background-color: rgb(236, 153, 114);
+}
+
+.animation-direction {
+	animation-name: rotate;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* animation-play-state */
+div.animation-play-state {
+	width: 100px;
+	height: 100px;
+	border: 10px solid silver;
+	border-radius: 50%;
+	background-color: rgb(159, 236, 114);
+}
+
+.animation-play-state {
+	animation-name: rotate;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse;
+	animation-play-state: paused;
+	
+}
+.animation-play-state:hover {
+	animation-play-state: running;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* animation-fill-mode */
+div.animation-fill-mode {
+	width: 100px;
+	height: 100px;
+	border: 10px solid green;
+}
+
+.animation-fill-mode {
+	background-color: rgb(245, 255, 229);
+	animation: fill-mode 3s linear 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fill-mode {
+	0% {
+		background-color: indianred;
+	}
+	50% {
+		width: 200px;
+	}
+  100% {
+		background-color: black;
+	}
+}
