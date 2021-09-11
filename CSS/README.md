@@ -9,6 +9,7 @@
 5. Transform
 6. Transition
 7. Animation
+8. Flexbox
 
 ### 공부 내용 및 일자 
 
@@ -19,3 +20,4 @@
 - 2021-09-10 [Transform](./0910/transform/README.md)
 - 2021-09-10 [Transition](./0910/transition/README.md)
 - 2021-09-10 [Animation](./0910/animation/README.md)
+- 2021-09-11 [Flexbox](./0910/flexbox/README.md)
