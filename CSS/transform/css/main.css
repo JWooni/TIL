@@ -1,0 +1,50 @@
+/* 
+    Transform (변형)
+*/
+/* scale */
+#scale {
+    width: 400px;
+
+    transform: scale(0.5);
+    transform: scale(1.5, 2.5);
+    transform: scaleX(0.5);
+    transform: scaleY(0.5);
+
+}
+
+#rotate {
+    width: 300px;
+
+    transform: rotate(45deg);
+
+}
+
+#translate {
+    width: 300px;
+
+    transform: translate(100px);
+    transform: translate(100px, 150px);
+    transform: translateX(100px);
+    transform: translatey(150px);
+    transform: translate(50%, 30%);
+
+}
+
+#skew {
+    width: 300px;
+    margin: 100PX;
+    
+    transform: skew(20deg);
+    transform: skewX(20deg);
+    transform: skewY(20deg);
+}
+
+#origin {
+    width: 300px;
+    margin: 100PX;
+
+    transform: scale(1.3);
+    transform-origin: top left;
+    transform-origin: bottom right;
+    transform-origin: 100px 50px;
+}
