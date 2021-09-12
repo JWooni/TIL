@@ -1,0 +1,408 @@
+/* flex */
+/* 
+  Flex는 요소의 크기가 불분명하거나 동적인 경우에도, 각 요소를 정렬할 수 있는 효율적인 방법을 제공합니다. 
+  우선 Flex는 2개의 개념으로 나뉩니다. 
+    첫 번째는 Container 두 번째는 Items 입니다. 
+    Container는 Items를 감싸는 부모 요소이며, 각 Item을 정렬하기 위해선 Container가 필수입니다. 
+  주의할 부분은 Container와 Items에 적용하는 속성이 구분되어 있다는 것입니다. 
+  Container에는 display, flex-flow, justify-content 등의 속성을 사용할 수 있으며, 
+  Items에는 order, flex, align-self 등의 속성을 사용할 수 있습니다
+*/
+/* .container {
+  border: 2px solid red;
+  display: inline-flex;
+}
+
+.container .item {
+  width: 100px;
+  height: 100px;
+  border: 2px solid;
+  border-radius: 10px;
+} */
+
+
+/* flex container */
+/* 
+  속성              의미 
+  display           Flex Container를 정의 
+  flex-flow         flex-direction와 flex-wrap의 단축 속성 
+  flex-direction    Flex Items의 주 축(main-axis)을 설정 
+  flex-wrap Flex    Items의 여러 줄 묶음(줄 바꿈) 설정 
+  justify-content   주 축(main-axis)의 정렬 방법을 설정 
+  align-content     교차 축(cross-axis)의 정렬 방법을 설정(2줄 이상) 
+  align-items       교차 축(cross-axis)에서 Items의 정렬 방법을 설정(1줄)
+*/
+
+/* display */
+/* 
+  값            의미  
+  flex Block    특성의 Flex Container를 정의 
+  inline-flex   Inline 특성의 Flex Container를 정의
+*/
+/* 
+  flex와 inline-flex는 차이는 단순합니다. 
+  display: flex;로 지정된 Flex Container는 Block 요소와 같은 성향(수직 쌓임)을 가지며,
+  display: inline-flex로 지정된 Flex Container는 Inline(Inline Block) 요소와 같은 성향(수평 쌓임)을 가집니다.
+*/
+
+/* flex-flow */
+/* 
+  값                의미                                  기본값 
+  flex-direction    Items의 주 축(main-axis)을 설정       row 
+  flex-wrap         Items의 여러 줄 묶음(줄 바꿈) 설정     nowrap
+ */
+
+/* flex-direction */
+/* Items의 주 축(main-axis)을 설정 */
+/* 
+  값                의미                                            기본값 
+  row               Itmes를 수평축(왼쪽에서 오른쪽으로)으로 표시       row 
+  row-reverse       Items를 row의 반대 축으로 표시 
+  column            Items를 수직축(위에서 아래로)으로 표시 
+  column-reverse    Items를 column의 반대 축으로 표시
+*/
+
+/* flex-wrap */
+/* Items의 여러 줄 묶음(줄 바꿈)을 설정 */
+/* 
+  값              의미                                              기본값
+  nowrap          모든 Itmes를 여러 줄로 묶지 않음(한 줄에 표시)      nowrap                                  
+  wrap            Items를 여러 줄로 묶음 
+  wrap-reverse    Items를 wrap의 역 방향으로 여러 줄로 묶음
+*/
+.container {
+  border: 4px solid;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.container .item {
+  width: 150px;
+  height: 100px;
+  background-color: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+}
+
+
+/* justify-content */
+/* 주 축(main-axis)의 정렬 방법을 설정합니다. */
+/* 
+  값                의미                                                                                    기본값 
+  flex-start        Items를 시작점(flex-start)으로 정렬                                                      flex-start 
+  flex-end          Items를 끝점(flex-end)으로 정렬 
+  center            Items를 가운데 정렬 
+  space-between     시작 Item은 시작점에, 마지막 Item은 끝점에 정렬되고 나머지 Items는 사이에 고르게 정렬됨 
+  space-around      Items를 균등한 여백을 포함하여 정렬
+*/
+.container-justify {
+  border: 4px solid;
+  display: flex;
+  justify-content: center;
+}
+
+.container-justify .item-justify {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+}
+
+
+/* align-content */
+/* 교차 축(cross-axis)의 정렬 방법을 설정 */
+/* flex-wrap 속성을 통해 Items가 여러 줄(2줄 이상)이고 여백이 있을 경우만 사용 */
+/* 
+  값                의미                                                                                  기본값 
+  stretch           Container의 교차 축을 채우기 위해 Items를 늘림                                          stretch 
+  flex-start        Items를 시작점(flex-start)으로 정렬 
+  flex-end          Items를 끝점(flex-end)으로 정렬 
+  center            Items를 가운데 정렬 
+  space-between     시작 Item은 시작점에, 마지막 Item은 끝점에 정렬되고 나머지 Items는 사이에 고르게 정렬됨 
+  space-around      Items를 균등한 여백을 포함하여 정렬
+*/
+.container-align-content {
+  height: 400px;
+  border: 4px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.container-align-content .item-align-content {
+  width: 120px;
+  height: 100px;
+  background-color: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+}
+
+/* align-items */
+/* 교차 축(cross-axis)에서 Items의 정렬 방법을 설정 */
+/* Items가 한 줄일 경우 많이 사용 */
+/* 
+  값            의미                                            기본값 
+  stretch       Container의 교차 축을 채우기 위해 Items를 늘림    stretch 
+  flex-start    Items를 각 줄의 시작점(flex-start)으로 정렬 
+  flex-end      Items를 각 줄의 끝점(flex-end)으로 정렬 
+  center        Items를 가운데 정렬 
+  baseline      Items를 문자 기준선에 정렬
+*/
+.container-align-items {
+  height: 400px;
+  border: 4px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container-align-items .item-align-item {
+  width: 120px;
+  height: 100px;
+  background-color: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Flex Items */
+/* 
+  속성          의미 
+  order         Flex Item의 순서를 설정 
+  flex          flex-grow, flex-shrink, flex-basis의 단축 속성 
+  flex-grow     Flex Item의 증가 너비 비율을 설정 
+  flex-shrink   Flex Item의 감소 너비 비율을 설정 
+  flex-basis    Flex Item의 (공간 배분 전) 기본 너비 설정 
+  align-self    교차 축(cross-axis)에서 Item의 정렬 방법을 설정
+*/
+/* 1. order */
+/* Item의 순서를 설정 (숫자가 클수록 순서가 밀림) */
+/* 
+  값    의미    기본값 
+  숫자  Item의  순서를 설정
+*/
+.container-order {
+  border: 4px solid;
+  display: flex;
+}
+
+.container-order .item-order {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item1 {
+  order: 1;
+}
+
+.item4 {
+  order: 1;
+}
+
+.item6 {
+  order: -1;
+}
+
+
+
+/* flex-grow */
+/* Item의 증가 너비 비율을 설정 */
+/* 
+  값    의미                          기본값 
+  숫자  Item의 증가 너비 비율을 설정    0
+*/
+.container-flex-grow {
+  border: 4px solid;
+  display: flex;
+}
+
+.container-flex-grow .item-flex-grow {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-grow-item1 {
+  flex-grow: 1;
+}
+
+.flex-grow-item2 {
+  width: 100px;
+}
+
+
+/* flex-shrink */
+/* Item이 감소하는 너비의 비율을 설정 */
+/* 
+  값    의미                          기본값 
+  숫자  Item의 감소 너비 비율을 설정    1
+*/
+
+/* flex-basis */
+/* Item의 (공간 배분 전) 기본 너비를 설정 */
+/* 
+  값    의미                         기본값 
+  auto  가변 Item과 같은 너비         auto 
+  단위   px, em, cm 등 단위로 지정
+*/
+.container-flex-basis {
+  display: flex;
+}
+
+.container-flex-basis .item-flex-basis {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+  flex-grow: 1;
+  flex-basis: 100px;
+}
+
+.container-flex-basis .itme-basis3 {
+  flex-grow: 2;
+}
+
+
+/* flex */
+/* Item의 너비(증가, 감소, 기본)를 설정하는 단축 속성 */
+/* 
+  값            의미                                기본값 
+  flex-grow     Item의 증가 너비 비율을 설정          0 
+  flex-shrink   Item의 감소 너비 비율을 설정          1 
+  flex-basis    Item의 (공간 배분 전) 기본 너비 설정  auto
+*/
+.container-flex {
+  border: 4px solid;
+  display: flex;
+}
+
+.container-flex .item-flex {
+  height: 100px;
+  background-color: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+  flex: 1 1 auto;
+}
+
+
+/* align-self */
+/* 교차 축(cross-axis)에서 개별 Item의 정렬 방법을 설정 */
+/* 
+  값            의미                                          기본값 
+  auto          Container의 align-items 속성을 상속받음        auto 
+  stretch       Container의 교차 축을 채우기 위해 Item을 늘림 
+  flex-start    Item을 각 줄의 시작점(flex-start)으로 정렬 
+  flex-end      Item을 각 줄의 끝점(flex-end)으로 정렬 
+  center        Item을 가운데 정렬 
+  baseline      Item을 문자 기준선에 정렬
+*/
+.container-align-self {
+  height: 400px;
+  border: 4px solid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.container-align-self .item-align-self {
+  width: 100px;
+  height: 100px;
+  background-color: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+}
+
+.container-align-self .item-align-self2 {
+  align-self: center;
+}
+
+.container-align-self .item-align-self4 {
+  align-self: flex-start;
+}
+
+.container-shrink-align-self .item-align-self7 {
+  align-self: stretch;
+}
+
+/* flex-shrink */
+.container-shrink {
+  height: 200px;
+  border: 5px dashed orange;
+  display: flex;
+}
+
+.item {
+  width: 200px;
+  height: 50px;
+  margin: 5px;
+  background-color: paleturquoise;
+  border: 3px solid blue;
+  font-size: 30px;
+}
+
+.item:nth-child(1) {
+  flex-shrink: 0;
+}
+
+.item:nth-child(3) {
+  flex-shrink: 2;
+}
+
+/* flex-basis */
+.container-basis {
+  height: 200px;
+  border: 5px dashed orange;
+  display: flex;
+}
+
+.item {
+  width: 200px;
+  height: 50px;
+  margin: 5px;
+  background-color: paleturquoise;
+  border: 3px solid blue;
+  font-size: 30px;
+
+  flex-grow: 1;
+  flex-basis: 100px;
+}
+
+/* flex(shorthand) */
+
+/* justify-content */
+.container-justify {
+  height: 200px;
+  border: 5px dashed orange;
+  display: flex;
+}
+
+.item {
+  width: 200px;
+  height: 50px;
+  margin: 5px;
+  background-color: paleturquoise;
+  border: 3px solid blue;
+  font-size: 30px;
+
+  flex-grow: 1;
+  flex-basis: 100px;
+}
