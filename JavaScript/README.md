@@ -7,4 +7,4 @@
 
 ### 공부 내용 및 일자 
 
-- 2021-09-15 [JavaScript 소개](./JavaScript/README.md)
+- 2021-09-15 [JavaScript 소개](./javascript/README.md)
