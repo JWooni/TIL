@@ -1,4 +1,4 @@
-# **JavaScript 개요**
+# **JavaScript 소개**
 
 - 1996년 brendan Eich(브랜던 아이크)가 개발 발표한 Script 언어
 - 객체기반언어 : 프로그래머가 생성하기 보다 생성된 객체들을 주고 사용하는 언어
