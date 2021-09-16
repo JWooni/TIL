@@ -12,6 +12,7 @@
 8. Transition
 9. Animation
 10. Flexbox
+11. Grid
 
 ### 공부 내용 및 일자 
 
