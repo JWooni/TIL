@@ -15,4 +15,4 @@
 - 2021-09-16 [Variable (변수)](./variable/README.md)
 - 2021-09-16 [DataType](./datatype/README.md)
 - 2021-09-17 [Operator (연산자)](./operator/README.md)
-- 2021-09-18 [Control statement(제어문)](./control statement/README.md)
+- 2021-09-18 [Control statement(제어문)](./controlstatement/README.md)
