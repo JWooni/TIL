@@ -126,7 +126,7 @@
     - 특수문자는 _와 $만 허용
     - 공백 문자 포함 불가
 
-    ![Untitled](./image/identifier.png)
+    ![식별자](./image/identifier.png)
 
 ### 주석
 
