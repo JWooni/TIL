@@ -83,7 +83,7 @@
 
 ## 컴퓨터 내부 동작 원리
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ab0ca2b-388a-42b2-a731-2cc81fa5a141/Untitled.png)
+![컴퓨터 내부 동작 원리](./image/computerflow.png)
 
 
 # **기본문법**
