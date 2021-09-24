@@ -1,4 +1,6 @@
-# Visual Studio Code
+# Setting
+
+## Visual Studio Code
 
 [설치](https://code.visualstudio.com/download)
 
@@ -7,7 +9,7 @@
 - MS의 통합 개발 환경(IDE) Visual Studio와 이름이 비슷하지만 따로 개발되고 있으며 IDE보다는 코드 에디터
 - MIT 라이센스로 오픈소스로 공개되어 있으며, 무료 사용
 
-# LeetCode
+## LeetCode
 
 [이동](https://leetcode.com/interview/?gclid=CjwKCAjwy7CKBhBMEiwA0Eb7ak3acn5T-TTO9BwoR4t-f6pPBwE5dXHLDdYCoAeOM0PE8nli-41nrhoCGgoQAvD_BwE)
 
@@ -16,7 +18,7 @@
 - 자바스크립트, C, C++, Python 등 총 14개의 인기 있는 코딩 언어를 지원
 - Facebook, Apple, Intel, Amazon 등의 기업에서 SW 문제해결 인터뷰 시 활용
 
-# Node.js
+## Node.js
 
 [설치](https://nodejs.org/ko/download/)
 
