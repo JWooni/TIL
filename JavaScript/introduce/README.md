@@ -114,7 +114,7 @@
 - 자바스크립트에서 문법을 만들 때 미리 정해진 용도로 동작하기 위해 정의해 놓은 단어
 - 자바스크립트에 예약된 키워드 목록(*는 ES5와 ES6에 추가된 단어)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5fae70bd-0ba1-4d4b-bfeb-09abc67fe87c/Untitled.png)
+![키워드](.image/keyword.png)
 
 ### 식별자
 
@@ -126,7 +126,7 @@
     - 특수문자는 _와 $만 허용
     - 공백 문자 포함 불가
 
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bbee9020-6211-44ac-8166-7a3fd42be911/Untitled.png)
+    ![Untitled](./image/identifier.png)
 
 ### 주석
 
