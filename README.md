@@ -2,7 +2,7 @@
 ## DAILY STUDY DOCUMENT
 
 ### 목차
-- [개발환경](./etting)
+- [Setting](./Setting)
 - [HTML](./HTML)
 - [CSS](./CSS)
 - [JavaScript](./JavaScript)
