@@ -79,7 +79,7 @@
 
 ## 코드 동작 흐름
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59b8a378-3fe7-46bc-bb6e-6b7443433bd5/Untitled.png)
+![코드 동작 흐름](./image/codeflow.png)
 
 ## 컴퓨터 내부 동작 원리
 
