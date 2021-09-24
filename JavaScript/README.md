@@ -16,7 +16,7 @@
 
 ### 공부 내용 및 일자 
 
-- 2021-09-24 [JavaScript 소개](./ntroduce/README.md)
+- 2021-09-24 [JavaScript 소개](./introduce/README.md)
 <!-- - 2021-09-16 [Variable (변수)](./variable/README.md)
 - 2021-09-16 [DataType (데이터형)](./datatype/README.md)
 - 2021-09-17 [Operator (연산자)](./operator/README.md)
