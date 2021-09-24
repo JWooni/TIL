@@ -20,7 +20,7 @@
 - 2021-09-24 [JavaScript 소개](./introduce/README.md)
 - 2021-09-24 [Variable and Constant(변수와 상수)](./variable_constant/README.md)
 - 2021-09-24 [Hoisting](./hoisting/README.md)
-- 2021-09-24 [DataType (데이터형)](./datatype/README.md)
+- 2021-09-24 [DataType (자료형)](./datatype/README.md)
 <!--- 2021-09-17 [Operator (연산자)](./operator/README.md)
 - 2021-09-18 [Control statement(제어문)](./controlStatement/README.md)
 - 2021-09-19 [Function (함수)](./function/README.md)
