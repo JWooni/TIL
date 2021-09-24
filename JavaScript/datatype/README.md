@@ -71,7 +71,7 @@
     - number(숫자형)은 정수, 부동소수점(floating point) 숫자를 표현하는 자료형
     - number와 관련된 연산은 사칙연산(+, -, *, /)가 대표적
     - number에는 일반적인 숫자 외에 Infinity, -Infinity, NaN(Not a Number) 같은 특수 숫자 값이 포함
-    - number에서는 25^{3}−1보다 큰 값을 사용할 수 없으며, 더 큰 정수를 다루고 싶다면 bigint 자료형 사용 필요
+    - number에서는 25<sup>3</sup>−1보다 큰 값을 사용할 수 없으며, 더 큰 정수를 다루고 싶다면 bigint 자료형 사용 필요
 
     ```jsx
     let num_1 = 123.0;
