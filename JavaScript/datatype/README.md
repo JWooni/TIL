@@ -17,7 +17,6 @@
 [mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/typeof)
     - typeof는 인수의 자료형을 반환하는 연산자
     - 연산자인 typeof x와 함수인 typeof(x)로 문법 지원
-
     ```jsx
     let str = "hello world";
     console.log(typeof str);
