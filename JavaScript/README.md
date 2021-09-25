@@ -9,6 +9,7 @@
 5. Object(객체)
 6. 형 변환
 7. Operator (연산자)
+8. Scope
 <!--5. Control statement (제어문)
 6. Function (함수)
 7. Arrow Function (화살표 함수)
@@ -26,6 +27,7 @@
 - 2021-09-25 [Object (객체)](./object/README.md)
 - 2021-09-25 [Type coercion (형 변환)](./typecoercion/README.md)
 - 2021-09-25 [Operator (연산자)](./operator/README.md)
+- 2021-09-25 [Scope](./scope/README.md)
 <!--- 2021-09-18 [Control statement(제어문)](./controlStatement/README.md)
 - 2021-09-19 [Function (함수)](./function/README.md)
 - 2021-09-20 [Arrow Function (화살표 함수)](./arrowfunction/README.md)
