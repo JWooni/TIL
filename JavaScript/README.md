@@ -4,8 +4,9 @@
 
 1. JavaScript 소개
 2. Variable and Constant(변수와 상수)
-3. Hoisting (호이스팅)
-4. DataType (자료형)
+3. Hoisting(호이스팅)
+4. DataType(자료형)
+5. Object(객체)
 <!-- 4. Operator (연산자)
 5. Control statement (제어문)
 6. Function (함수)
@@ -18,9 +19,10 @@
 ### 공부 내용 및 일자 
 
 - 2021-09-24 [JavaScript 소개](./introduce/README.md)
-- 2021-09-24 [Variable and Constant(변수와 상수)](./variable_constant/README.md)
+- 2021-09-24 [Variable and Constant (변수와 상수)](./variable_constant/README.md)
 - 2021-09-24 [Hoisting](./hoisting/README.md)
 - 2021-09-24 [DataType (자료형)](./datatype/README.md)
+- 2021-09-25 [Object (객체)](./object/README.md)
 <!--- 2021-09-17 [Operator (연산자)](./operator/README.md)
 - 2021-09-18 [Control statement(제어문)](./controlStatement/README.md)
 - 2021-09-19 [Function (함수)](./function/README.md)
