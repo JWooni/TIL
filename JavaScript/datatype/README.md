@@ -13,7 +13,7 @@
     - symbol : 문자열과 함께 객체 property로 사용, ES6에 추가
 - 객체타입(object type)
     - object : 두개 이상의 복잡한 개체 저장 가능
-- typeof
+- typeof<>
 [mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/typeof)
     - typeof는 인수의 자료형을 반환하는 연산자
     - 연산자인 typeof x와 함수인 typeof(x)로 문법 지원
