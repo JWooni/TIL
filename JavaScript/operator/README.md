@@ -1,76 +1,115 @@
-# Operator(연산자)
+# 연산자
 
-- 연산자란 프로그래밍에서 쓰이는 기호들이다.
-- 연산자에는 산술, 문자열, 증감, 비교, 대입, 삼항, 논리, 비트연산자 등이 있다.
+- 연산자는 프로그램에서 데이터를 처리하여 결과를 산출할 목적으로 사용되는 문자
+- 연산의 대상 값은 피연산자라고 하며, 피 연산자의 개수에 따라 단항/이항/삼항 연산자의 종류 존재
 
-## 산술 연산자 (arithmetic operator)
+## 연산자 우선순위
+
+![연산자](./image/operator.png)
+
+## 산술 연산자
+
+- 수학적 계산을 위해 제공하는 연산자
 
 ```jsx
- console.log(1 + 2)
- console.log(5 - 7)
- console.log(3 * 4)
- console.log(10 / 2)
- console.log(7 % 5)
+// 산술 연산자
+// 덧셈 연산자: +
+console.log(31 + 10); // 41 
+// 뺄셈 연산자: -
+console.log(31 - 10); //  21 
+// 곱셈 연산자: *
+console.log(31 * 10); // 310 
+// 나눗셈 연산자: /
+console.log(31 / 10); // 3.1 
+// 몫
+console.log(parseInt(31 / 10)); // 3
+ // 나머지 연산자: %
+console.log(31 % 10); // 1 
+// 거듭제곱 연산자: **
+console.log(2 ** 3); // 8
 ```
 
-## 할당 연산자 (assignment operator)
+## 대입 연산자
+
+- 계산한 결과를 하나의 변수에 저장하기 위한 연산자
 
 ```jsx
-let a = 2
- a = a + 1
- a += 1
- a *= 1
+// 대입 연산자: =
+let num_1 = 123;
+let num_2 = 456;
+let str_1 = "hello";
+let str_2 = "world!";
 
- console.log(a)
+let num_3, str_3;
+num_3 = num_1 + num_2; 
+str_3 = str_1 + str_2;
+
+console.log(num_3); // 579 
+console.log(str_3); // helloworld!
+
+let num_4 = num_1 - num_2; 
+console.log(num_4); // -333
 ```
 
-## 비교 연산자 (comparison operator)
+## 복합 대입 연산자
+
+- 산술 연산자로 피연산자를 계산해 결과값을 한번에 대입시켜주는 연산자
 
 ```jsx
- const a = 13
- const b = 13
+// 복합 대입 연산자
+// 대입 연산자: = 
+let num = 10;
+let result_1, result_2, result_3, result_4, result_5; 
+result_1 = result_2 = result_3 = result_4 = result_5 = 31;
 
- console.log(a === b)
+// 복합 대입 연산자: += 
+result_1 += num;
+console.log(result_1); // 41 
 
- function isEqual(x, y){
-   return x === y
- }
+// 복합 대입 연산자: -=
+result_2 -= num;
+console.log(result_2); // 21 
 
- console.log(isEqual(1, 1))
- console.log(isEqual(2, '2'))
+// 복합 대입 연산자: *=
+result_3 *= num;
+console.log(result_3); // 310 
 
- console.log(a != b)
+// 복합 대입 연산자: /=
+result_4 /= num;
+console.log(result_4); // 3.1 
 
- console.log(a > b)
- console.log(a <= b)
+// 복합 대입 연산자: %=
+result_5 %= num;
+console.log(result_5); // 1
 ```
 
-## 논리 연산자 (logical operator)
+## 증가 감소 연산자
+
+- 숫자 1만큼 증가시키거나 감소시킬 때 사용되는 연산자
+- 증가 연산자 : ++(피연산자), (피연산자)++;
+- 감소 연산자 : —(피연산자), (피연산자)—;
 
 ```jsx
- const a = 1 === 1
- const b = 'AB' === 'ABC'
- const c = false
+// 증가 감소 연산자
+let num, result; 
 
- console.log(a)
- console.log(b)
- console.log(c)
+num = 10;
+result = num++;
+console.log(result); // 10 
+console.log(num); // 11
 
- console.log('&&',a && b && c) // 모두 trued여야 true
- console.log('||',a || b || c) // 하나라도 true면 true
- console.log('!:',!b) // 부정
-```
+num = 10; 
+result = ++num;
+console.log(result); // 11 
+console.log(num); // 11
 
-## 삼항 연산자 (ternary operator)
+num = 10; 
+result = num--;
+console.log(result); // 10 
+console.log(num); // : 9
 
-```jsx
-const a = 1 < 2
-
- if (a){
-   console.log('참')
- } else {
-   console.log('거짓')
- }
-
- console.log(a ? '참' : '거짓')
+num = 10; 
+result = --num;
+console.log(result); // 9 
+console.log(num); // 9
 ```
