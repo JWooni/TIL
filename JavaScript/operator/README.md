@@ -5,7 +5,7 @@
 
 ## 연산자 우선순위
 
-![연산자](./image/operator.png)
+![연산자](./image/operator.PNG)
 
 ## 산술 연산자
 
