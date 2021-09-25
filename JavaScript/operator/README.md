@@ -113,3 +113,34 @@ result = --num;
 console.log(result); // 9 
 console.log(num); // 9
 ```
+
+- 좌항과 우항의 피연산자를 비교한 다음 결과값을 논리적 자료형으로 반환하는 연산자
+- ==은 단순 값의 같음을 비교하는 동등 비교, ===는 자료형까지 같음을 판단하는 일치 비교 연산자
+
+```jsx
+console.log("Z" > "A"); // true
+console.log("Hello" < "Hi"); // true
+console.log("Hello" >= "Helloo"); // false
+console.log("5" <= 10); // true
+console.log(true == 1); // true
+console.log(false != 123); // true
+console.log(true === 1); // false
+console.log(false !== 123); // true
+```
+
+## 논리 연산자
+
+- 좌항과 우항의 피연산자 간 논리 값을 연산하여 참 또는 거짓을 결과로 얻는 연산자
+- 논리 연산자 : &&(AND), ||(OR), !(NOT)
+
+```jsx
+console.log(true || false); // true
+console.log(Boolean(0 || false)); // false
+console.log(Boolean(123 || false)); // true
+console.log(Boolean(123 && 0)); // false
+console.log(Boolean(false && true)); // false
+console.log(Boolean(true && 3)); // true
+console.log(Boolean(0 && false)); // false
+console.log(!false); // true
+console.log(!123); // false
+```
