@@ -1,3 +1,28 @@
+# object(객체)
+
+[mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+- object는 다수의 원시 자료형을 포함하거나 복잡한 개체(Entity)를 표현할 수 있는 자료형
+- object는 Object() 혹은 중괄호({})를 통해 생성
+- object의 개체는 key:value 형태로 표현하며, 접근은 object.key 형태로 표현
+
+```jsx
+let user = {
+	name : "john",
+	age : 30
+};
+
+console.log(typeof user);
+console.log(typeof user.name);
+console.log(typeof user.age);
+
+console.log(user.name);
+console.log(user.age);
+
+user.age = 30;
+console.log(user.age);
+```
+
 ## object 복사
 
 - object의 값을 복사할 때는 대상 전체가 아닌 object 내 주소 값만 복사되는 문제 발생
