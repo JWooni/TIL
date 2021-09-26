@@ -173,11 +173,11 @@ console.log(calculator(div, 7, 3)); // 2.3333333333333335
 
 ```jsx
 function MAX(x, y) {
-	if (x > y) {
-		return x;
-	}	else if (x < y){
-		return y;
-	}
+ if (x > y) {
+  return x;
+ } else if (x < y){
+  return y;
+ }
 }
 	console.log(MAX(0, 3)); // output: 3
 	console.log(MAX(-1, 5)); // output: 5
