@@ -30,7 +30,7 @@
 - 2021-09-24 [Hoisting](./hoisting/README.md)
 - 2021-09-24 [DataType (자료형)](./datatype/README.md)
 - 2021-09-25 [Object (객체)](./object/README.md)
-- 2021-09-25 [Type coercion (형 변환)](./typecoercion/README.md)
+- 2021-09-25 [형 변환](./typecoercion/README.md)
 - 2021-09-25 [Operator (연산자)](./operator/README.md)
 - 2021-09-25 [Scope](./scope/README.md)
 - 2021-09-25 [조건문](./condition/README.md)
