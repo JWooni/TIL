@@ -183,3 +183,66 @@ function MAX(x, y) {
 	console.log(MAX(-1, 5)); // output: 5
 	console.log(MAX(100, 7)); // output: 100
 ```
+
+## 함수의 이해
+
+### 함소의 표현
+
+- 다양한 방법으로 함수 정의가 가능하며, 함수 표현식처럼 함수를 정의하여 변수에 저장 가능
+
+```jsx
+/* 1. 함수 선언식(Function Declarations) */ 
+function add_1(x, y) { return x + y; }
+
+/* 2. 함수 표현식(Function Expressions) */ 
+const add_2 = function (x, y) { return x + y; };
+
+/* 3. 화살표 함수 (Arrow Function) */
+const add_3 = (x, y) => x + y;
+
+const add_4 = add_1;
+
+console.log(add_4(1, 3)); // 4
+console.log(add_1 == add_2); // false
+console.log(add_1 == add_4); // true
+console.log(Object.getOwnPropertyDescriptors(add_1));
+console.log(Object.getOwnPropertyDescriptors(add_2));
+console.log(Object.getOwnPropertyDescriptors(add_3));
+console.log(Object.getOwnPropertyDescriptors(add_4));
+```
+
+### 함수 저장
+
+- 배열의 요소(element) 혹은 객체의 속성에 함수를 정의하여 저장 가능
+
+```jsx
+// 함수 저장
+let list = [ 
+	"john", 
+	27, 
+	function hello_func() { 
+		console.log("hello"); 
+	} 
+];
+
+let obj = {
+	name: "john",
+	age: 27,
+	hello_func() {
+	console.log("hello"); },
+};
+
+function hello_func() { 
+	console.log("hello"); 
+} 
+
+hello_func(); // hello
+obj.hello_func(); // hello 
+list[2](); // hello
+
+console.log(typeof hello_func); // function
+console.log(typeof obj.hello_func); // function
+console.log(typeof list[2]); // function
+console.log(Object.getOwnPropertyDescriptors(obj));
+console.log(Object.getOwnPropertyDescriptors(list));
+```
