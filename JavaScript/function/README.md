@@ -1,230 +1,185 @@
-# **함수**
-   - 일을 구분하여 작성할 때
-    - 코드의 중복을 줄일 수 있다.
-    - 호출하여 사용(사용자 동작)
-    - 제작사 함수, 사용자정의 함수
-        - 제작사 함수 : W3C
-        - 사용자정의 함수 : 개발자 생성
-    - 작성법
+# Function
+
+[mdn](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions)
+
+- 함수는 다수의 명령문을 코드 블록으로 감싸고, 하나의 실행 단위로 만든 코드의 집합
+- 유사한 동작을 하는 코드를 하나로 묶어, 범용성을 확대시킨 블록 코드
+- 함수는 정의 부분과 호출 부분으로 구성
+- 함수는 가급적 한가지 일만 하며, 매개변수는 최대 3개 이내로 작성을 권장
+
+## 함수 정의
+
+```jsx
+/* 1. 함수 선언식(Function Declarations) 
+function func (arg1, arg2, ...argN) {
+	expression;
+ }
+*/
+function add(x, y) {
+	 return x + y;
+}
+
+/* 2. 함수 표현식(Function Expressions) 
+const func = function (arg1, arg2, ...argN) {
+	expression;
+ }
+*/
+const add = function (x, y) {
+	 return x + y;
+};
+
+/* 3. 화살표 함수 (Arrow Function)
+const func = (arg1, arg2, ...argN) => expression; 
+*/
+const add = (x, y) => x + y;
+```
+
+## 함수 호출
+
+- 자바스크립트 함수는 매개변수와 인수의 개수가 일치하는지 확인하지 않음
+- ES6에서 도입된 기본값을 통해 undefined 변수가 들어올 경우 값 초기화 지정 가능
+
+```jsx
+// 함수 호출
+// 1. default value
+function print_add(x, y = 10) {
+	 console.log(x + y);
+}
+print_add(10, 20, 30); // 30
+print_add(10, 20); // 30
+print_add(10); // 20
+print_add(); // NaN
+
+// 2. dynamic parameters 
+function print_min() {
+	// console.log(arguments);
+	console.log(arguments[0] - arguments[1]);
+}
+print_min(10, 20, 30); // -10
+print_min(10, 20); // -10
+print_min(10); // NaN
+print_min(); // NaN
+```
+
+## 함수 반환
+
+- return 후 코드는 수행되지 않으며, default return value는 undefined
+
+```jsx
+// 함수 반환
+function add(x, y) {
+	return x + y;
+	console.log("hello!"); // 미 수행 코드 
+}
+
+function dummy() {} 
+
+function checkAge(age) {
+	if (age >= 18) { 
+		return true;
+		} else { 
+			return false;
+	} 
+}
+console.log(add(10, 20)); // 30
+console.log(dummy()); // undefined
+console.log(checkAge(14)); // false
+console.log(checkAge(20)); // true
+```
+
+## 재귀함수
+
+- 함수 스스로 자신을 참조해 호출하면서 동일한 코드가 계속적으로 수행되는 함수 호출 방법
+- 재귀 함수는 특정 조건이 됐을 때 자신을 그만 호출되도록 제한하는 exit code가 필요
+
+```jsx
+// 재귀함수
+// 1. basic recursive function 
+function recursive(num) {
+	if (num == 0) return 0;
+	return num + recursive(num - 1); 
+}
+console.log(recursive(3)); // 6 
+
+// 2. factorial function
+function factorial(x) {
+	if (x === 0) return 1; 
+	return x * factorial(x - 1);
+}
+const num = 3;
+
+let result = factorial(num);
+
+console.log(`The factorial of ${num} is ${result}`); // The factorial of 3 is 6
+```
+
+## 콜백함수
+
+- 콜백 함수(Callback Function)란 다른 함수의 매개변수로 전달되어 수행되어지는 함수
+- 고차 함수(Higher-order Function)란 매개변수를 통해 함수를 받아 호출하는 함수
+
+```jsx
+// 콜백함수
+function add(x, y) { 
+	return x + y;
+}
+function sub(x, y) { 
+	return x - y;
+}
+function mul(x, y) { 
+	return x * y;
+}
+function div(x, y) { 
+	return x / y;
+}
+function calculator(callback, x, y) { 
+	return callback(x, y);
+}
+console.log(calculator(add, 7, 3)); // 10
+console.log(calculator(sub, 7, 3)); // 4
+console.log(calculator(mul, 7, 3)); // 21
+console.log(calculator(div, 7, 3)); // 2.3333333333333335
+```
+
+## call by *
+
+- call by value
+    - 값에 의한 복사로 함수 내에서 매개변수 값을 변경 시켜도 영향이 미치지 않음
+    - 원시 타입(primitive type)을 매개변수로 넘겼을 때 발생
 
     ```jsx
-    - 반환형이 없다. (정의하지 않는다.)
-        function 함수명(매개변수,,,){        // 매개변수는 전역형태 : var 붙이지 않는다.
-
-        }
-
-    - 호출
-     <script> 영역호출
-        함수명(값,,,);
-      <body>에서 사용자의 동작에 의한 호출
-         - 속성 : onXxx 함수명 (값,,,);
+    // call by *
+    let a = 1;
+    let add = function (b) { b = b + 1; }; // callee 
+    add(a); // caller
+    console.log(a); // 1
     ```
 
-# **기명함수, 무기명함수**
+- call by reference
+    - 주소에 대한 복사로 함수 내에서 매개변수 내 값을 변경시키면 원본 데이터에도 영향을 받음
+    - 객체 타입(Object type)을 매개변수로 넘겼을 때 발생
 
- - 기명함수 : 이름이 있는 함수
-        - 업무를 구분하여 처리할 때
-        - 사용법
+    ```jsx
+    // call by reference
+    var a = { v: 1 };
+    var add = function (b) { b.v = b.v + 1; }; // callee 
+    add(a); // caller
+    console.log(a.v); // 2
+    ```
 
-  ```jsx
-  function 함수명(매개변수,,,){
-  }
-  ```
+## 연습문제
 
- - 무기명함수 : 이름이 없는 함수
-     - 변수명으로 함수에 접근
-     - 변수명(값,,,);
-     - 사용법
-
-        ```jsx
-        let 변수명 = function(매개변수,,,){
-
-        }
-        ```
-
-    - 속성
-        - 속성이 동작하면 코드가 동시에 실행되어져야 한다.
-        - 자동호출된다.
-
-        ```jsx
-        window.onload = function( ){
-
-        }
-        ```
-
-        # **무기명함수 이벤트 처리**
-
-    - 태그 하나를 얻어와서 태그 하나에 이벤트를 처리.
-    - 이베트처리 코드의 재사용성이 낮다.
-        - 문법
-
-        ```jsx
-        window.document.getElementById("id명").이벤트처리속성 = function(){
-
-                이벤트가 발생했을 때 처리할 코드    
-
-            }
-            <input type="button" value="클릭" id="id명"/>
-        ```
-
-    # **태그를 얻는 함수**
-
-    - name으로 얻기 : 값의 유효성검증
-        - <form> : 반드시 필요
-            - HTML Form Controll의 값을 back - end로 전송할 때 사용
-            - 문법
-
-            ```jsx
-            window.document.폼이름.컨트롤명
-            ```
-
-    - id로 얻기 : HTML 특정부분의 디자인을 전송할때 (AJAX에서 DOM으로 디자인 변경할 때)
-        - <form> : 필요없다.
-
-        ```jsx
-        window.document.getElementById("id명")
-        ```
-
-    - tag명으로 얻기
-        - document.getElementByTagName("태그명")
-        - 같은 태그가 여럿존재하기 때문에 특정태그에 접근하기 어렵다.
-
-# ****이벤트를 Listener에 등록하여 처리****
-
-- 이벤트처리 코드의 재사용성이 높아진다.
-- 문법
+- 두 정수를 입력 받아 가장 큰 값을 출력해주는 함수를 작성하시오.
 
 ```jsx
-window.document.getElementById("id명").addEventListener("이벤트",함수명);  // on을 빼고 사용한다. ex) onclick => click
-
-<script type = "text/javaScript>
-    function 함수명(){
-        
-        이벤트처리 코드 정의
-
-    }
-    
-    document.getElementById("id명").addEventListener("click", 함수명);
-
-</script>
-
-    <body>
-        <input type="text" id="id명"/>
-
-    </body>
-```
-
-# **HTML Form Control 값 얻기**
-
-- name 속성
-
-```jsx
-- <form> 존재.
-        - HTML 형상
-        <form name="이름">
-        - <input type="text" name="유일">
-        - <input type="radio".checkbox">
-
-    - 이름이 유일한 객체의 값 얻기
-        window.document.폼이름.컨트롤명.value
-            <script type="text/javaScript">
-            window onload=function(){
-                document.getElementById("btn").addEventListener("click",getValue);
-
-    function getValue(){                                // var obj = document.form;
-        let name = document.form.name.value;            // var name = obj.name.value;
-        let addr = document.form.addr.value;            // var addr = obj.addr.value;
-		}
-```
-
-- id로 얻기 (<form> x )
-
-```jsx
-let name = document.getElementById("id명").value;
-let addr = document.getElementById("id명").value;
-```
-
-- 값을 하나 얻기
-
-```html
-<input type="text" password file "hidden" checkbox>    // 체크박스 하나만 사용
-```
-
-- 값이 여러개 나오는 경우 : 배열로 처리
-
-```html
-- checkboc, radio, select
-
-    <input type = "checkbox" value="전송할값" name="[]"> 0
-
-    - 문법   
-     document.폼이름.컨트롤명[인덱스].value // 값얻기
-                                   .checkbox // 선택상태얻기
-```
-
-- 선택된 모든 값 얻기
-
-```jsx
-1.
-    for(var i = 0; i < document.폼이름.컨트롤명.length; i++){
-        if(document.폼이름.컨트롤명[i].checked){
-           document.폼이름.컨트롤명[i].value;
-        } // end if
-
-    } // end for
-  
-2. 
-    var obj = document.폼이름;
-    for(var i = 0; i < obj.컨트롤명.length; i++){
-        if(obj.컨트롤명[i].checked){
-           obj.컨트롤명[i].value;
-        } // end if
-    } // end for
-```
-
-- 선택된 값 하나를 얻기
-
-```html
-1.
-    <select name="">
-       <option value="값"> 보여줄 값 </option>
-
-    </select>
-
-2. 간단하게
-    document.폼이름.컨트롤명.value
-```
-
-- 배열
-    - select의 name 속성은 하나이나 옵션이 여러개이므로 배열로 처리할 수 있다.
-
-```jsx
-let obj = document.폼이름;
-
-    for(var i = 0; i < obj.컨트롤명.length; i++){
-        if(obj.컨트롤명[i].selected){
-            obj.컨트롤명[i].value;
-        }
-    }
-```
-
-- JavaScript의 값을 HTML Form Control 설정
-    - name 속성이 유일한 경우
-        - document.폼이름.control명.value = 값;
-    - checked 속성변경
-        - document.폼이름.control명[인덱스].checked = true/false;
-    - selected 속성변경
-        - document.폼이름.control명[인덱스].selected = true/false;
-
-# JavaScript에서 HTML <body>로 출력
-
-```jsx
-1. 출력 대상얻기
-        let divNode = document.getElementById("div tag id명");
-
-    2. HTML 생성
-        let output = "<strong>ooo</strong>;
-
-    3. 출력
-        divNode.innerHTML=output;
+function MAX(x, y) {
+	if (x > y) {
+		return x;
+	}	else if (x < y){
+		return y;
+	}
+}
+	console.log(MAX(0, 3)); // output: 3
+	console.log(MAX(-1, 5)); // output: 5
+	console.log(MAX(100, 7)); // output: 100
 ```
