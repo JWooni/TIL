@@ -14,6 +14,8 @@
 10. 반복문
 11. Function (함수)
 12. Method
+13. Nember
+14. String
 <!--5. Control statement (제어문)
 7. Arrow Function (화살표 함수)
 8. DOM (문서 객체 모델)
@@ -35,6 +37,8 @@
 - 2021-09-25 [반복문](./loop/README.md)
 - 2021-09-26 [Function (함수)](./function/README.md)
 - 2021-09-26 [Method](./method/README.md)
+- 2021-09-26 [Nember](./number/README.md)
+- 2021-09-26 [String](./string/README.md)
 <!--- 2021-09-18 [Control statement(제어문)](./controlStatement/README.md)
 - 2021-09-20 [Arrow Function (화살표 함수)](./arrowfunction/README.md)
 - 2021-09-21 [DOM (문서 객체 모델)](./dom/README.md)
