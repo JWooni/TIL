@@ -17,6 +17,7 @@
 13. Nember
 14. String
 15. Array(배열)
+16. 고차함수
 <!--5. Control statement (제어문)
 7. Arrow Function (화살표 함수)
 8. DOM (문서 객체 모델)
@@ -41,6 +42,7 @@
 - 2021-09-26 [Nember](./number/README.md)
 - 2021-09-26 [String](./string/README.md)
 - 2021-09-26 [Array](./array/README.md)
+- 2021-09-26 [고차함수](./higher-OrderFunction/README.md)
 <!--- 2021-09-18 [Control statement(제어문)](./controlStatement/README.md)
 - 2021-09-20 [Arrow Function (화살표 함수)](./arrowfunction/README.md)
 - 2021-09-21 [DOM (문서 객체 모델)](./dom/README.md)
