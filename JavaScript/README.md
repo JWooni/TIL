@@ -20,6 +20,7 @@
 16. 고차함수
 17. 생성자
 18. Collection
+19. Math
 <!--
 7. Arrow Function (화살표 함수)
 8. DOM (문서 객체 모델)
@@ -47,6 +48,7 @@
 - 2021-09-26 [고차함수](./higher-OrderFunction/README.md)
 - 2021-09-26 [생성자](./constructor/README.md)
 - 2021-09-26 [Collection](./collection/README.md)
+- 2021-09-27 [Math](./math/README.md)
 <!--
 - 2021-09-20 [Arrow Function (화살표 함수)](./arrowfunction/README.md)
 - 2021-09-21 [DOM (문서 객체 모델)](./dom/README.md)
