@@ -22,6 +22,7 @@
 18. Collection
 19. Math
 20. Date
+21. 기본 문제 풀이
 <!--
 7. Arrow Function (화살표 함수)
 8. DOM (문서 객체 모델)
@@ -51,6 +52,7 @@
 - 2021-09-26 [Collection](./collection/README.md)
 - 2021-09-27 [Math](./math/README.md)
 - 2021-09-27 [Date](./date/README.md)
+- 2021-09-28 [기본 문제 풀이](./basicQuestion/README.md)
 <!--
 - 2021-09-20 [Arrow Function (화살표 함수)](./arrowfunction/README.md)
 - 2021-09-21 [DOM (문서 객체 모델)](./dom/README.md)
