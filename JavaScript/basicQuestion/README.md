@@ -400,3 +400,302 @@ for (let i = 0; i < input.length; i++) {
 	console.log(answer(input[i][0], input[i][1]));
 }
 ```
+
+## 종합
+
+- 최솟값 구하기
+    - 문제 설명
+        - 두 수의 정수를 입력 받아 최소값을 반환해주는 함수를 구현하시오.
+
+```jsx
+function answer(x, y) {
+	let min;
+
+	if (x > y) {
+		min = y;
+	} else {
+		min = x;
+	}
+
+	return min;
+	}
+
+	let input = [
+	// TC: 1 
+	[16, 3],
+	// TC: 2 
+	[-3, 1],
+	// TC: 3 
+	[1000, 525],
+];
+		
+for (let i = 0; i < input.length; i++) {
+	console.log(`#${i + 1} ${answer(input[i][0], input[i ][1])}`);
+}
+```
+
+- 제곱 구현
+    - 문제 설명
+        - 두 수 x, y를 입력 받아 x의 y 제곱 값을 반환해주는 함수를 구현하시오.
+        - 제곱 연산자(**)는 사용하지 않는다.
+
+```jsx
+function answer(x, y) {
+	let result = 1;
+
+	for (let i = 1; i <= y; i++) {
+		result *=x; 
+	}
+
+	return result;
+	}
+
+	let input = [
+		// TC: 1 
+		[2, 3],
+		// TC: 2 
+		[4, 6],
+		// TC: 3 
+		[1, 100],
+];
+
+for (let i = 0; i < input.length; i++) {
+	console.log(`#${i + 1} ${answer(input[i][0], input[i ][1])}`);
+	}
+```
+
+- 놀이기구 입장 제한
+    - 문제 설명
+        - 본 놀이기구는 안전상의 이유로 키 150cm 이상만 탈 수 있다.
+        - 탑승하려는 고객이 놀이기구를 탈 수 있는지 판단하는 함수를 구현하시오.
+        - 입력 값은 객체로 이름 / 나이 / 키가 입력되며, 출력 값은 탑승 가능 시 true, 불가능 시 false를 반환한다.
+
+```jsx
+function answer(user) {
+	let permit;
+
+	permit = user.height >= 150;
+	
+	return permit;
+	}
+
+let input = [
+	{ name: "john", age: 27, height: 181 }, 
+	{ name: "alice", age: 12, height: 148 }, 
+	{ name: "bob", age: 14, height: 156 }, ];
+
+	for (let i = 0; i < input.length; i++) {
+	console.log(`#${i + 1} ${answer(input[i])}`);
+}
+```
+
+- 요일 구하기
+    - 문제 설명
+        - 날짜를 입력 받아 요일을 반환해주는 함수를 구현하시오.
+        - 입력 값은 문자형 날짜(datestring) 값이 입력되며, 문자형 형태의 요일을 반환한다.
+
+```jsx
+function answer(str) {
+	let week = new Array(
+	"일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"
+	);
+	let day;
+
+	let date = new Date(str); 
+	day = week[date.getDay()];
+	
+	return day;
+}	
+
+let input = [
+	// TC: 1
+	"2021-01-27", 
+	// TC: 2
+	"2021-02-27", 
+	// TC: 3
+	"2021-03-14", ];
+
+for (let i = 0; i < input.length; i++) {
+	console.log(`#${i + 1} ${answer(input[i])}`);
+}
+```
+
+- 중복 단어 제거
+    - 문제 설명
+        - 중복 단어를 제거해주는 함수를 구현하시오.
+        - 입력 값은 배열 형태로 요소들은 문자형이 입력되고, 중복 단어가 제거된 배열을 반환한다.
+
+```jsx
+function answer(arr) {
+	let new_arr = [];
+	new Set(arr).forEach(function (item) { 
+		new_arr.push(item);
+	});
+	return new_arr; 
+}
+
+let input = [
+	// TC: 1
+	["john", "alice", "alice"], 
+	// TC: 2
+	["Hello", "hello", "HELLO", "hello"], 
+	// TC: 3
+	["kiwi", "banana", "mango", "kiwi", "banana"], 
+];
+
+for (let i = 0; i < input.length; i++) { 
+	process.stdout.write(`#${i + 1} `); 
+	console.log(answer(input[i]));
+}
+```
+
+- 배열 내 최대값 구하기
+    - 문제 설명
+        - 정수가 저장된 배열을 입력 받아 그 중 최대값을 반환해주는 함수를 구현하시오.
+        - 입력 값은 배열 형태로 값은 정수가 입력되며, 그 중 최대값을 반환한다.
+
+```jsx
+function answer(arr) {
+	let max;
+	max = Number.MIN_SAFE_INTEGER;
+	for (let i = 0; i < arr.length; i++) { 
+		if (arr[i] > max) {
+			max = arr[i];
+		}
+	}
+	return max; 
+}
+
+	let input = [
+		// TC: 1
+		[1, 6, 5, 2, 3], 
+		// TC: 2
+		[19, 41, 23, -4, 17], 
+		// TC: 3
+		[-64, -27, -41, -33, -59], 
+	];
+	
+	for (let i = 0; i < input.length; i++) {
+		console.log(`#${i + 1} ${answer(input[i])}`);
+	}
+```
+
+- 스팸 메일
+    - 문제 설명
+        - 최근 스팸 메일이 급증하여, 메일 업무 처리에 저장이 생겼다.
+        - 대소문자를 구분하지 않고 Advert로 시작하는 메일 제목은 스팸 처리하는 함수를 구현하시오.
+        - 입력 값은 문자형이며, 출력 값은 스팸으로 판단할 경우 true, 아닐 경우 false를 반환한다.
+
+```jsx
+function answer(str) {
+	let spam_flag;
+	spam_flag = str.toLowerCase().includes("advert"); 
+	return spam_flag;
+}
+
+let input = [
+	// TC: 1
+	"RE: Request documents", 
+	// TC: 2
+	"[Advertisement] free mobile!", 
+	// TC: 3
+	"50% off this week (advertising)", 
+];
+
+for (let i = 0; i < input.length; i++) {
+	console.log(`#${i + 1} ${answer(input[i])}`);
+}
+```
+
+- 배열 회전
+    - 문제 설명
+        - 배열을 입력 받아 순서를 역으로 만들어 반환해주는 함수를 구현하시오.
+        - 입력은 배열 형태로 값은 정수형과 문자형으로 구성되어 있으며, 역으로 변환된 배열을 반환한다.
+
+```jsx
+function answer(user) {
+	let reverse = [];
+	for (let i = user.length - 1; i >= 0; i--) { 
+		reverse.push(user[i]);
+	}
+	return reverse; 
+}
+
+let input = [
+	// TC: 1
+	[1, 2, 3, 4], 
+	// TC: 2
+	[-1, 6, "hello", -15], 
+	// TC: 3
+	["apple", "banana", "mango"], 
+];
+
+for (let i = 0; i < input.length; i++) { 
+		process.stdout.write(`#${i + 1} `); 
+		console.log(answer(input[i]));
+}
+```
+
+- 문자 교정
+    - 문제 설명
+        - 우리 출판사는 출판되는 모든 책의 단어들이 앞 글자가 대문자로 표기되어야 한다.
+        - 업무로 바쁜 동료를 위해, 원고의 단어 앞 글자를 모두 대문자로 변경시켜주는 함수를 구현하시오.
+        - 입력 값은 문자형 형태의 단어들이며, 교정된 문자형으로 치환시켜 변환한다.
+
+```jsx
+function answer(str) {
+	let fix_str = "";
+	for (let item of str.split(" ")) {
+	fix_str += item[0].toUpperCase() + item.slice(1) + " "; }
+	return fix_str; 
+}
+
+let input = [
+	// TC: 1
+	"Hello, My name is john", 
+	// TC: 2
+	"This week is closed due to COVID-19", 
+	// TC: 3
+	"fifty percent off this week", ];
+	for (let i = 0; i < input.length; i++) {
+	console.log(`#${i + 1} ${answer(input[i])}`);
+}
+```
+
+- 2차원 배열의 곱셈 합
+    - 문제 설명
+        - 2차원 배열을 입력 받아 모든 요소를 곱한 값을 반환해주는 함수를 구현하시오.
+        - 입력 값은 2차원 배열로 Number 자료형 값이 들어오며, 모든 요소를 곱한 값을 반환해준다.
+
+```jsx
+function answer(arr) {
+	let product = 1;
+	for (let i = 0; i < arr.length; i++) { 
+		for (let j = 0; j < arr[i].length; j++) {
+			product *= arr[i][j]; 
+		}
+	}
+	return product; 
+}
+
+let input = [
+	// TC: 1
+	[[1], [2], [3]], 
+	// TC: 2
+	[
+		[1, 2], 
+		[3, 4], 
+		[5, 6, 7],
+	],
+	// TC: 3
+	[
+		[5, 1],
+		[0.2, 4, 0.5], 
+		[3, 9],
+	], 
+];
+
+for (let i = 0; i < input.length; i++) {
+	console.log(`#${i + 1} ${answer(input[i])}`);
+}
+```
