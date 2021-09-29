@@ -5,19 +5,14 @@
 1. Math 개요 
 2. 알고리즘 복잡도
 3. 경우의 수
-<!-- 2. HTML 이란
-3. TEXT 요소
-4. 구조를 나타내는 요소 
-5. 목록과 표
-6. 임베디드 요소
-7. 폼 관련 요소
-8. 전역 속성 -->
+4. 재귀식
 
 ### 공부 내용 및 일자 
 
 - 2021-09-29 [Math 개요](./overview/README.md)
 - 2021-09-29 [알고리즘 복잡도](./algorithmComplexity/README.md)
 - 2021-09-29 [경우의 수](./numberOfCases/README.md)
+- 2021-09-29 [재귀식](./recurrenceRelation/README.md)
 <!-- - 2021-08-29 [HTML 이란? (선행)](./0829/README.md)
 - 2021-08-30 [HTML 이란?](./0830/README.md)
 - 2021-08-31 [TEXT 요소](./0831/README.md)
