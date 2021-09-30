@@ -7,6 +7,7 @@
 3. 경우의 수
 4. 재귀식
 5. 기본 문제 풀이
+6. 실전 문제 풀이
 
 ### 공부 내용 및 일자 
 
@@ -15,6 +16,7 @@
 - 2021-09-29 [경우의 수](./numberOfCases/README.md)
 - 2021-09-29 [재귀식](./recurrenceRelation/README.md)
 - 2021-09-29 [기본 문제 풀이](./basicQuestion/README.md)
+- 2021-09-30 [실전 문제 풀이](./practiceQuestion/README.md)
 <!-- - 2021-08-29 [HTML 이란? (선행)](./0829/README.md)
 - 2021-08-30 [HTML 이란?](./0830/README.md)
 - 2021-08-31 [TEXT 요소](./0831/README.md)
