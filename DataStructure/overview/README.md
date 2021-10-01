@@ -6,7 +6,7 @@
 
 ## 자료구조의 분류
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/35287060-b9d5-44df-a74f-561b216c1e05/Untitled.png)
+![Data Structure](./image/dataStructure.png)
 
 - 단순구조 : 프로그래밍에서 사용되는 기본 데이터 타입
 - 선형구조 : 저장되는 자료의 전후관계가 1:1 (리스트, 스택, 큐 등)
