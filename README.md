@@ -7,3 +7,4 @@
 - [CSS](./CSS)
 - [JavaScript](./JavaScript)
 - [Math](./Math)
+- [Data structure](./Datatructure)
