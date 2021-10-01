@@ -7,4 +7,4 @@
 
 ### 공부 내용 및 일자 
 
-- 2021-10-01 [Data Structure 개요](./DataStructure/README.md)
+- 2021-10-01 [Data Structure 개요](./overview/README.md)
