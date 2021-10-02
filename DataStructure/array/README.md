@@ -184,3 +184,298 @@ for (let key in fruits) {
     console.log(fruits[key]); // apple, orange, melon 
 }
 ```
+## 배열 탐색 / 변형
+
+### 배열 탐색
+
+- index 탐색(앞에서 부터) : Array.indexOf(item, from)
+- index 탐색(뒤에서 부터) : Array.lastIndexOf(item, from)
+- 값 포함 여부 확인 : Array.includes(item, from)
+
+```jsx
+// 배열 탐색
+let fruits = ["apple", "orange", "banana", "orange", "melon"];
+console.log(fruits.indexOf("orange")); // 1
+console.log(fruits.indexOf("Orange")); // -1
+console.log(fruits.indexOf("orange", 2)); // 3
+console.log(fruits.lastIndexOf("orange")); // 3
+console.log(fruits.lastIndexOf("orange", -3)); // 1
+console.log(fruits.lastIndexOf("orange", 0)); // -1
+console.log(fruits.includes("banana")); // true
+console.log(fruits.includes("Banana")); // false
+console.log(fruits.includes(0)); // false
+```
+
+### 배열 변형
+
+- 배열 정렬
+    - 배열 정렬 : Array.sort()
+    - 배열 반전 : Array.reverse()
+
+```jsx
+let nums = [1, -1, 4, 5, 2, 0];
+console.log(nums.sort()); // [ -1, 0, 1, 2, 4, 5 ] 
+console.log(nums.reverse()); // [ 5, 4, 2, 1, 0, -1 ]
+
+let fruits = ["apple", "orange", "banana", "melon"];
+console.log(fruits.sort()); // [ 'apple', 'banana', 'melon', 'orange' ] 
+console.log(fruits.reverse()); // [ 'orange', 'melon', 'banana', 'apple' ]
+```
+
+- 배열 변환
+    - 배열 값을 문자열로 변환 : Array.join(separator)
+
+```jsx
+// 배열 변환
+let fruits = ["apple", "orange", "banana", "melon"]; 
+let str = fruits.join();
+console.log(str); // apple,orange,banana,melon 
+
+let str_separator = fruits.join(";");
+console.log(str_separator); // apple;orange;banana;melon let result = str_separator.split(";");
+console.log(result); // [ 'apple', 'orange', 'banana', 'melon' ]
+```
+
+## 배열 반복
+
+### sort()
+
+- sort() 함수의 매개변수로 함수를 넣어 고차함수를 이용한 정렬 수행 가능
+    - before
+
+```jsx
+let nums = [1, -1, 4, 0, 10, 20, 12];
+console.log(nums.sort()); // [ -1, 0, 1, 10, 12, 20, 4 ] 
+console.log(nums.reverse()); // [ 4, 20, 12, 10, 1,  0, -1 ]
+```
+
+- after
+
+```jsx
+let ascending_order = function (x, y) { return x - y; };
+let descending_order = function (x, y) { return y - x; };
+let nums = [1, -1, 4, 0, 10, 20, 12]; 
+console.log(nums.sort(ascending_order)); // [ -1,  0,  1, 4, 10, 12, 20] 
+console.log(nums.sort(descending_order)); // [ 20, 12, 10, 4, 1, 0, -1 ]
+```
+
+## forEach()
+
+- 배열 요소 별 콜백함수 각각에 실행 : Array.forEach(function(item, index, array){})
+    - item : 배열 요소
+    - index : 배열 위치
+    - array : 배열
+
+```jsx
+// for문
+let nums = [1, 2, 3];
+for (let i = 0; i < nums.length; i++) { 
+    console.log(nums[i]);
+}
+
+// forEach()
+nums.forEach(function (i) { 
+    console.log(i);
+});
+```
+
+### map()
+
+- 배열 요소 별 함수 호출 및 결과를 배열로 반환 : Array.map(function(item, index, array){})
+    - item : 배열 요소
+    - index : 배열 위치
+    - array : 배열
+
+```jsx
+// map()
+// for문
+let nums = [1, 2, 3, 4, 5]; 
+let use_for_loop = [];
+for (let i = 0; i < nums.length; i++) { 
+    use_for_loop.push(nums[i] * 2);
+}
+console.log(use_for_loop); // [ 2, 4, 6, 8, 10 ]
+
+// map() 사용
+let nums = [1, 2, 3, 4, 5];
+let use_map = nums.map(function (item) { 
+    return item * 2;
+});
+console.log(use_map); // [ 2, 4, 6, 8, 10 ]
+```
+
+### find()
+
+- 콜백함수의 조건을 만족하는, 단하나의 값만 반환 : Array.find(function(item, index, array){})
+    - item : 배열 요소
+    - index : 배열 위치
+    - array : 배열
+
+```jsx
+let users = [
+    { name: "bob", age: 17, job: false }, 
+    { name: "alice", age: 20, job: false }, 
+    { name: "john", age: 27, job: true },
+];
+
+let find_job = users.find(function (user) { 
+    return user.job == false;
+});
+console.log(find_job); // { name: 'bob', age: 17, job: false } 
+
+let find_age = users.find(function (user) {
+    return user.age > 19; 
+});
+console.log(find_age); // { name: 'alice', age: 20, job: false }
+```
+
+### filter()
+
+- 콜백 함수의 조건을 만족하는 값을 배열로 반환 : Array.filter(item, index, array){})
+    - item : 배열 요소
+    - index : 배열 위치
+    - array : 배열
+
+```jsx
+let users = [
+    { name: "bob", age: 17, job: false }, 
+    { name: "alice", age: 20, job: false }, 
+    { name: "john", age: 27, job: true },
+];
+
+let filter_job = users.filter(function (user) { 
+    return user.job == false;
+});
+console.log(filter_job);
+/* 
+    [ { name: 'bob', age: 17, job: false },
+    { name: 'alice', age: 20, job: false } ] 
+*/ 
+    
+let filter_age = users.filter(function (user) {
+    return user.age > 19; 
+});
+console.log(filter_age);
+/* 
+    [ { name: 'alice', age: 20, job: false }, 
+    { name: 'john', age: 27, job: true } ] 
+*/
+```
+
+### reduce()
+
+- 요소별 함수 수행 누적 결과값 반환 : Array.reduce(function(accumulator, item, index, array){})
+    - accumulator : 이전 함수 결과(initial로 초기값 설정 가능)
+    - item : 배열 요소
+    - index : 배열 위치
+    - array : 배열
+
+```jsx
+let nums = [1, 2, 3, 4, 5]; 
+let call_count = 0;
+
+console.log("result\tvalue\tindex");
+
+let sum = nums.reduce(function (accumulator, item, index, array) { 
+    console.log(accumulator, "\t\t", item, "\t\t", index);
+    call_count++;
+    return accumulator + item;
+}, 0); // initial 없다면 idnex 1부터 시작 
+/* output
+result value index
+   0     1     0
+   1     2     1
+   3     3     2
+   6     4     3
+   10    5     4 
+*/
+console.log(call_count); // 5 
+console.log(sum); // 15
+```
+
+## 배열 논리연산
+
+### some()
+
+- 배열 내 단 하나라도 콜백 함수의 조건을 만족하는 요소가 있다면 true, 없다면 false 반환(빈 배열인 경우 false)
+- Array.some(function(item, index, array){})
+    - item : 배열 요소
+    - index : 배열 위치
+    - array : 배열
+
+```jsx
+let users = [
+    { name: "bob", age: 17, job: false }, 
+    { name: "alice", age: 20, job: false }, 
+    { name: "john", age: 27, job: true },
+];
+let some_job = users.some(function (user) { 
+    return user.job == false;
+});
+console.log(some_job); // true 
+
+let some_age = users.some(function (user) {
+    return user.age < 16; 
+});
+console.log(some_age); // false 
+
+let empty = [].some((item) => item > 16);
+console.log(empty); // false
+```
+
+### every()
+
+- 배열 내 모든 요소가 콜백 함수의 조건을 만족하다면 true, 아니면 false(빈 배열인 경우 true)
+- Array.every(function(item, index, array){})
+    - item : 배열 요소
+    - index : 배열 위치
+    - array : 배열
+
+```jsx
+let users = [
+    { name: "bob", age: 17, job: false }, 
+    { name: "alice", age: 20, job: false }, 
+    { name: "john", age: 27, job: true },
+];
+
+let every_job = users.every(function (user) { 
+    return user.job == false;
+});
+console.log(every_job); // false 
+
+let every_age = users.every(function (user) {
+    return user.age > 16; 
+});
+console.log(every_age); // true 
+let empty = [].every((item) => item > 16);
+console.log(empty); // true
+```
+
+## N차원 배열
+
+- 배열(Array)안에 N개 만큼의 배열이 존재하는 객체
+- 2/3차원 지도 정보, RGB를 저장하는 2차원 사진 파일 등을 표현할 때 활용 가능
+- 2차원 배열은 array[N][M}으로 접근하며, 배열(Array) 전체를 push(), pop() 가능
+
+```jsx
+let array = [ [101, 102, 103], [201, 202, 203], [301, 302, 303], ];
+console.log(array); // [ [ 101, 102, 103 ], [ 201, 202, 203 ], [ 301, 302, 303 ] ]
+console.log(array[0]); // [ 101, 102, 103 ]
+console.log(array[1][0]); // 201
+console.log(array[2][2]); // 303
+let arr_2 = array.pop();
+console.log(array.length); // 2
+console.log(arr_2); // [ 301, 302, 303 ]
+console.log(array); // [ [ 101, 102, 103 ], [ 201, 202, 203 ] ]
+let array_num = array.push([401, 402, 403]);
+console.log(array.length); // 3
+console.log(array_num); // 3
+console.log(array); // [ [ 101, 102, 103 ], [ 201, 202, 203 ], [ 401, 402, 403 ] ]
+for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) { 
+        array[i][j] += 1000;
+        console.log(array[i][j]); 
+    }
+}
+/* 1101 ... 1403 */
+```
