@@ -13,4 +13,4 @@
 - 2021-10-01 [Data Structure 개요](./overview/README.md)
 - 2021-10-01 [Array(배열)](./array/README.md)
 - 2021-10-02 [배열 문제 풀이](./arrayQuestion/README.md)
-- 2021-10-03 [Prototype](./prototpye/README.md)
+- 2021-10-03 [Prototype](./prototype/README.md)
