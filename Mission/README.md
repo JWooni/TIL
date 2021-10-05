@@ -50,9 +50,13 @@
     
     [문법 검사 결과](https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fcompassionate-wing-223684.netlify.app%2F&ucn_lang=ko&ucn_task=conformance#)
     
+    ![문법 검사](./images/mission2_1.PNG)
+    
 5. 라이트하우스에서 접근성 및 SEO 관련 분석 리포트 제출
     
     [접근성 및 SEO 관련 분석 리포트](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcompassionate-wing-223684.netlify.app%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext)
+    
+    ![접근성 및 SEO](./images/mission2_2.PNG)    
     
 6. 프로젝트 완료 후기(시행착오 및 성장기)
     
