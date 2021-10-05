@@ -44,15 +44,15 @@
     
 3. HTML/CSS를 활용하여 구현(자바스크립트는 선택사항)
     
-    [https://lucid-raman-e6f1f2.netlify.app/](https://compassionate-wing-223684.netlify.app/)
+    [구현](https://compassionate-wing-223684.netlify.app/)
     
 4. 문법 검사 결과 제출
     
-    [https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Flucid-raman-e6f1f2.netlify.app%2F&ucn_lang=ko&ucn_task=conformance#https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fcompassionate-wing-223684.netlify.app%2F&ucn_lang=ko&ucn_task=conformance#](https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fcompassionate-wing-223684.netlify.app%2F&ucn_lang=ko&ucn_task=conformance#)
+    [문법 검사 결과](https://validator.w3.org/unicorn/check?ucn_uri=https%3A%2F%2Fcompassionate-wing-223684.netlify.app%2F&ucn_lang=ko&ucn_task=conformance#)
     
 5. 라이트하우스에서 접근성 및 SEO 관련 분석 리포트 제출
     
-    [https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcompassionate-wing-23684.netlify.app%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcompassionate-wing-223684.netlify.app%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext)
+    [접근성 및 SEO 관련 분석 리포트](https://googlechrome.github.io/lighthouse/viewer/?psiurl=https%3A%2F%2Fcompassionate-wing-223684.netlify.app%2F&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo&category=pwa&utm_source=lh-chrome-ext)
     
 6. 프로젝트 완료 후기(시행착오 및 성장기)
     
