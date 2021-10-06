@@ -10,6 +10,7 @@
 6. Double Linked List
 7. Circular Linked List
 8. 연결 리스트 문제
+9. Stack
 
 
 ### 공부 내용 및 일자 
@@ -22,3 +23,4 @@
 - 2021-10-04 [Double Linked List](./doubleLinkedList/README.md)
 - 2021-10-04 [Circular Linked List](./circularLinkedList/README.md)
 - 2021-10-05 [연결 리스트 문제](./linkedListQuestion/README.md)
+- 2021-10-05 [Strack](./stack/README.md)
