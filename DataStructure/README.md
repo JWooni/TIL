@@ -11,6 +11,7 @@
 7. Circular Linked List
 8. 연결 리스트 문제
 9. Stack
+10. Queue
 
 
 ### 공부 내용 및 일자 
@@ -24,3 +25,4 @@
 - 2021-10-04 [Circular Linked List](./circularLinkedList/README.md)
 - 2021-10-05 [연결 리스트 문제](./linkedListQuestion/README.md)
 - 2021-10-05 [Strack](./stack/README.md)
+- 2021-10-06 [Queue](./queue/README.md)
