@@ -14,6 +14,7 @@
 10. Queue
 11. priority Queue(우선순위 큐)
 12. Circular Queue (원형 큐)
+13. Deque
 
 
 ### 공부 내용 및 일자 
@@ -30,3 +31,4 @@
 - 2021-10-06 [Queue](./queue/README.md)
 - 2021-10-07 [Priority Queue](./priorityQueue/README.md)
 - 2021-10-08 [Circular Queue](./circularQueue/README.md)
+- 2021-10-08 [Deque](./deque/README.md)
