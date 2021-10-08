@@ -12,7 +12,8 @@
 8. 연결 리스트 문제
 9. Stack
 10. Queue
-11. priorityQueue(우선순위 큐)
+11. priority Queue(우선순위 큐)
+12. Circular Queue (원형 큐)
 
 
 ### 공부 내용 및 일자 
@@ -27,4 +28,5 @@
 - 2021-10-05 [연결 리스트 문제](./linkedListQuestion/README.md)
 - 2021-10-05 [Strack](./stack/README.md)
 - 2021-10-06 [Queue](./queue/README.md)
-- 2021-10-07 [PriorityQueue](./priorityQueue/README.md)
+- 2021-10-07 [Priority Queue](./priorityQueue/README.md)
+- 2021-10-08 [Circular Queue](./circularQueue/README.md)
