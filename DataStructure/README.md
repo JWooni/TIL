@@ -38,4 +38,4 @@
 - 2021-10-08 [Queue & Deque 문제풀이](./queueDequeQuestion/README.md)
 - 2021-10-08 [Dictionary](./dictionary/README.md)
 - 2021-10-08 [Hash Table](./hashTable/README.md)
-- 2021-10-08 [Linear Probing Hash Table](./linearprobingHashTable/README.md)
+- 2021-10-08 [선행 조사법 해시테이블(Linear Probing Hash Table)](./linearprobingHashTable/README.md)
