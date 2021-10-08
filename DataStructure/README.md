@@ -13,10 +13,11 @@
 9. Stack
 10. Queue
 11. priority Queue(우선순위 큐)
-12. Circular Queue (원형 큐)
+12. Circular Queue(원형 큐)
 13. Deque
 14. 큐 & 데크 문제풀이
 15. Dictionary
+16. Hash Table
 
 ### 공부 내용 및 일자 
 
@@ -35,3 +36,4 @@
 - 2021-10-08 [Deque](./deque/README.md)
 - 2021-10-08 [Queue & Deque 문제풀이](./queueDequeQuestion/README.md)
 - 2021-10-08 [Dictionary](./dictionary/README.md)
+- 2021-10-08 [Hash Table](./hashTable/README.md)
