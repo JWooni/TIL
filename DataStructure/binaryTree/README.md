@@ -19,7 +19,7 @@
     - 노드의 개수 : n =2^h - 1
 - 트리 형태
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/230630f6-b5c4-4073-be59-9fb0edf66811/Untitled.png)
+![포화이진트리](./image/포화이진트리.PNG)
 
 ## 완전 이진 트리(Complete binary tree)
 
