@@ -46,4 +46,4 @@
 - 2021-10-09 [Chaining Hash Table](./chainingHashTable/README.md)
 - 2021-10-09 [Dictionary & Hash Table 문제풀이](./dictionaryHashTableQueue/README.md)
 - 2021-10-09 [Tree](./tree/README.md)
-- 2021-10-09 [Binary Tree(이진트리)](./(binaryTree/README.md)
+- 2021-10-09 [Binary Tree(이진트리)](./binaryTree/README.md)
