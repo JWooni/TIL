@@ -20,6 +20,7 @@
 16. Hash Table
 17. 선형 조사법 해시테이블
 18. Chaining Hash Table
+19. 딕셔러니 & 해시테이블 문제풀이
 
 ### 공부 내용 및 일자 
 
@@ -41,3 +42,4 @@
 - 2021-10-08 [Hash Table](./hashTable/README.md)
 - 2021-10-08 [선행 조사법 해시테이블(Linear Probing Hash Table)](./linearprobingHashTable/README.md)
 - 2021-10-09 [Chaining Hash Table](./chainingHashTable/README.md)
+- 2021-10-09 [Dictionary & Hash Table 문제풀이](./dictionaryHashTableQueue/README.md)
