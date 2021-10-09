@@ -29,7 +29,7 @@
     - 노드의 개수 : n < 2^h - 1
 - 트리 형태
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/db5f899f-9df8-430a-911e-4b7bdc9f30f2/Untitled.png)
+![완전이진트리](./image/완전이진트리.PNG)
 
 ## 정 이진 트리(Full binary tree)
 
@@ -39,7 +39,7 @@
     - 노드의 개수 : n ≤ 2^h - 1
 - 트리 형태
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/92dcd3ae-c20f-4f0c-8441-790f0e5cc3a6/Untitled.png)
+![정이진트리](./image/정이진트리.PNG)
 
 ## 편향 이진 트리(Skewed binary tree)
 
@@ -49,7 +49,7 @@
     - 노드의 개수 : h
 - 트리 형태
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c537eda7-7f2e-4ac7-9680-4d3dc6015ec0/Untitled.png)
+![편향이진트리](./image/편향이진트리.PNG)
 
 ## 균형 이진 트리(Balanced binary tree)
 
@@ -59,7 +59,7 @@
     - 균형 트리 종류 : AVL트리, Red-Black 트리, B트리, B+트리, B*트리
 - 트리 형태
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1d2be4b2-6316-4c4d-82f0-fe9610eb7528/Untitled.png)
+![균형이진트리](./image/완전이진트리.PNG)
 
 ## 이진 트리 순회(Binary Tree Traversal)
 
