@@ -22,6 +22,7 @@
 18. Chaining Hash Table
 19. 딕셔러니 & 해시테이블 문제풀이
 20. Tree
+21. Binary Tree(이진 트리)
 
 ### 공부 내용 및 일자 
 
@@ -45,3 +46,4 @@
 - 2021-10-09 [Chaining Hash Table](./chainingHashTable/README.md)
 - 2021-10-09 [Dictionary & Hash Table 문제풀이](./dictionaryHashTableQueue/README.md)
 - 2021-10-09 [Tree](./tree/README.md)
+- 2021-10-09 [Binary Tree(이진 트리)](./(binaryTree/README.md)
