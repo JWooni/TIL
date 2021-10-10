@@ -28,6 +28,7 @@
 24. DFS
 25. BFS
 26. 비선형 문제풀이
+27. Heap
 
 ### 공부 내용 및 일자 
 
@@ -57,3 +58,4 @@
 - 2021-10-10 [DFS](./dfs/README.md)
 - 2021-10-10 [BFS](./bfs/README.md)
 - 2021-10-10 [비선형 문제풀이](./nonLinear/README.md)
+- 2021-10-10 [Heap](./heap/README.md)
