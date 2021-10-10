@@ -24,6 +24,7 @@
 20. Tree
 21. Binary Tree(이진 트리)
 22. Binary Search Tree(이진 탐색 트리)
+23. Graph
 
 ### 공부 내용 및 일자 
 
@@ -49,3 +50,4 @@
 - 2021-10-09 [Tree](./tree/README.md)
 - 2021-10-09 [Binary Tree(이진트리)](./binaryTree/README.md)
 - 2021-10-09 [Binary Search Tree(이진 탐색 트리)](./binarySearchTree/README.md)
+- 2021-10-10 [Graph](./graph/README.md)
