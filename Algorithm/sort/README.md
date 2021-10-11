@@ -16,7 +16,7 @@
 - 평균 시간 복잡도 : O(n^2)
 - 알고리즘 동작 방식
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/10600f4b-f18d-49d9-ac8b-37f4b48e410e/Untitled.png)
+![거품정렬](./image/정렬.PNG)
 
 - 거품 정렬 구현
 
@@ -121,7 +121,7 @@ for (let i = 0; i < sorting.length; i++) {
 - 평균 시간 복잡도 : O(n^2)
 - 알고리즘 동작 방식
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b77bf9cc-6b7c-49d3-bbd4-65af9ae816d0/Untitled.png)
+![선택정렬](./image/선택정렬.PNG)
 
 - 선택 정렬 구현
 
@@ -168,7 +168,7 @@ for (let i = 0; i < sorting.length; i++) {
 - 평균 시간 복잡도 : O(n^2)
 - 알고리즘 동작 방식
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fa12b08f-0bdd-4b9c-9335-2d358d1025b2/Untitled.png)
+![삽입정렬](./image/삽입정렬.PNG)
 
 - 삽입 정렬 구현
 
@@ -222,7 +222,7 @@ for (let i = 0; i < sorting.length; i++) {
 - 평균 시간 복잡도 : O(n log n)
 - 알고리즘 동작 방식
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7ced0844-9019-4a5a-a60e-c1393143a672/Untitled.png)
+![병합정렬](./image/병합정렬.PNG)
 
 - 병합 정렬 구현
 
@@ -264,7 +264,7 @@ for (let i = 0; i < sorting.length; i++) {
 - 평균 시간 복잡도 : O(n log n)
 - 알고리즘 동작 방식
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c5f4ab3c-26a4-4fad-8259-6b40c0e53609/Untitled.png)
+![퀵정렬](./image/퀵정렬.PNG)
 
 - 퀵 정렬 구현
 
