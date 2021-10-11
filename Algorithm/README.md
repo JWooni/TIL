@@ -7,5 +7,5 @@
 
 ### 공부 내용 및 일자 
 
-- 2021-10-11 [Algorithm 개요](./overview/README.md)
+- 2021-10-11 [정렬](./sort/README.md)
 
