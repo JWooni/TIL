@@ -8,4 +8,5 @@
 - [JavaScript](./JavaScript)
 - [Math](./Math)
 - [Data Structure](./DataStructure)
+- [Algorithm](./Algorithm)
 - [Mission](./Mission)
