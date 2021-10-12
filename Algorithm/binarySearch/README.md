@@ -7,7 +7,7 @@
     - 재귀를 이용한 검색 : binarySearch_recursive()
 - 알고리즘 동작 방식
 
-![이진검색](./image/이진검색.)
+![이진검색](./image/이진검색.PNG)
 
 - 이진 검색 구현
     - binarySearch_loop(): 반복문 기반의 이진 검색
