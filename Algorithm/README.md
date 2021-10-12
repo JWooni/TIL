@@ -6,6 +6,7 @@
 2. 이진 검색(Binary Search)
 3. 탐욕 알고리즘(Greedy Algorithm)
 4. Backtracking
+5. 동적 계획법 (Dynamic programming)
 
 
 ### 공부 내용 및 일자 
@@ -14,4 +15,5 @@
 - 2021-10-12 [이진 검색(Binary Search)](./binarySearch/README.md)
 - 2021-10-12 [탐욕 알고리즘(Greedy Algorithm)](./greedyAlgorithm/README.md)
 - 2021-10-12 [Backtracking](./backtracking/README.md)
+- 2021-10-12 [동적 계획법 (Dynamic programming)](./dynamicProgramming/README.md)
 
