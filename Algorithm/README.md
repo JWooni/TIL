@@ -7,6 +7,7 @@
 3. 탐욕 알고리즘(Greedy Algorithm)
 4. Backtracking
 5. 동적 계획법 (Dynamic programming)
+6. 최단 경로 (Shortest Path)
 
 
 ### 공부 내용 및 일자 
@@ -16,4 +17,5 @@
 - 2021-10-12 [탐욕 알고리즘(Greedy Algorithm)](./greedyAlgorithm/README.md)
 - 2021-10-12 [Backtracking](./backtracking/README.md)
 - 2021-10-12 [동적 계획법 (Dynamic programming)](./dynamicProgramming/README.md)
+- 2021-10-13 [최단 경로 (Shortest Path)](./shortestPath/README.md)
 
