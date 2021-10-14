@@ -8,6 +8,7 @@
 4. Backtracking
 5. 동적 계획법 (Dynamic programming)
 6. 최단 경로 (Shortest Path)
+7. 실전 문제 풀이
 
 
 ### 공부 내용 및 일자 
