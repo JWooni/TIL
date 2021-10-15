@@ -19,5 +19,5 @@
 - 2021-10-12 [Backtracking](./backtracking/README.md)
 - 2021-10-12 [동적 계획법 (Dynamic programming)](./dynamicProgramming/README.md)
 - 2021-10-13 [최단 경로 (Shortest Path)](./shortestPath/README.md)
-- 2021-10-14 [실전 문제 풀이](./practicQeuestion/README.md)
+- 2021-10-14 [실전 문제 풀이](./practiceQuestion/README.md)
 
