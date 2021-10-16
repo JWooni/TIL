@@ -166,3 +166,77 @@ function solution(info, query) {
   return answer;
 }
 ```
+
+### 합승 택시 요금
+
+- [https://programmers.co.kr/learn/courses/30/lessons/72413](https://programmers.co.kr/learn/courses/30/lessons/72413)
+
+```jsx
+function solution(n, s, a, b, fares) {
+  let answer = 0;
+  let mat = [];
+  for (let i = 1; i <= n; i++) {
+    mat[i] = [];
+    for (let j = 1; j <= n; j++) {
+      mat[i][j] = Number.MAX_SAFE_INTEGER;
+    }
+  }
+  for (let i = 1; i <= n; i++) mat[i][i] = 0;
+  for (let v of fares) {
+    mat[v[0]][v[1]] = v[2];
+    mat[v[1]][v[0]] = v[2];
+  }
+  for (let i = 1; i <= n; i++)
+    for (let j = 1; j <= n; j++)
+      for (let k = 1; k <= n; k++)
+        mat[j][k] = Math.min(mat[j][k], mat[j][i] + mat[i][k]);
+  answer = Number.MAX_SAFE_INTEGER;
+  for (let i = 1; i <= n; i++)
+    answer = Math.min(answer, mat[s][i] + mat[i][a] + mat[i][b]);
+  return answer;
+}
+```
+
+### 광고 삽입
+
+- [https://programmers.co.kr/learn/courses/30/lessons/72414](https://programmers.co.kr/learn/courses/30/lessons/72414)
+
+```jsx
+function str2Sec(time) {
+  let [h, m, s] = time.split(":").map((n) => Number(n));
+  return h * 3600 + m * 60 + s;
+}
+function sec2Str(n) {
+  let h = Math.floor(n / 3600);
+  let m = Math.floor(n / 60) % 60;
+  let s = n % 60;
+  return [h, m, s].map((n) => String(n).padStart(2, "0")).join(":");
+}
+
+function solution(play_time, adv_time, logs) {
+  let play = str2Sec(play_time);
+  let adv = str2Sec(adv_time);
+  let view = Array(play).fill(0);
+  for (let s of logs) {
+    let start = str2Sec(s.substr(0, 8));
+    let finish = str2Sec(s.substr(9, 8));
+    view[start]++;
+    view[finish]--;
+  }
+  for (let i = 1; i < view.length; i++) view[i] += view[i - 1];
+  let sum = 0;
+  let maxSum = 0;
+  for (let i = 0; i < adv; i++) sum += view[i];
+  maxSum = sum;
+  let idx = 0;
+  let s = 0;
+  for (let i = adv; i < play; i++) {
+    sum += view[i] - view[s++];
+    if (sum > maxSum) {
+      idx = s;
+      maxSum = sum;
+    }
+  }
+  return sec2Str(idx);
+}
+```
