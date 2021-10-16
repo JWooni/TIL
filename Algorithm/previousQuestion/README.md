@@ -240,3 +240,112 @@ function solution(play_time, adv_time, logs) {
   return sec2Str(idx);
 }
 ```
+
+### 카드 짝 맞추기
+
+- [https://programmers.co.kr/learn/courses/30/lessons/72415](https://programmers.co.kr/learn/courses/30/lessons/72415)
+
+```jsx
+function bfs(board, src, dst) {
+  let direction = [
+    [-1, 0],
+    [1, 0],
+    [0, 1],
+    [0, -1],
+  ];
+  let visited = Array(4)
+    .fill(0)
+    .map(() => Array(4).fill(false));
+  let q = [];
+  q.push(src);
+  while (q.length != 0) {
+    let [y, x, cnt] = q.shift();
+    if (x == dst[1] && y == dst[0]) return cnt;
+    for (let i = 0; i < 4; i++) {
+      let nx = x + direction[i][0];
+      let ny = y + direction[i][1];
+      if (nx < 0 || nx > 3 || ny > 3 || ny < 0) continue;
+      if (!visited[ny][nx]) {
+        visited[ny][nx] = true;
+        q.push([ny, nx, cnt + 1]);
+      }
+      for (let j = 0; j < 2; j++) {
+        if (board[ny][nx] != 0) break;
+        if (
+          nx + direction[i][0] < 0 ||
+          nx + direction[i][0] > 3 ||
+          ny + direction[i][1] < 0 ||
+          ny + direction[i][1] > 3
+        )
+          break;
+        nx += direction[i][0];
+        ny += direction[i][1];
+      }
+      if (!visited[ny][nx]) {
+        visited[ny][nx] = true;
+        q.push([ny, nx, cnt + 1]);
+      }
+    }
+  }
+  return Number.MAX_SAFE_INTEGER;
+}
+function permutation(board, src) {
+  let ret = Number.MAX_SAFE_INTEGER;
+  for (let num = 1; num <= 6; ++num) {
+    let card = [];
+    for (let y = 0; y < 4; y++)
+      for (let x = 0; x < 4; x++) if (board[y][x] == num) card.push([y, x, 0]);
+    if (card.length === 0) continue;
+    let one = bfs(board, src, card[0]) + bfs(board, card[0], card[1]) + 2;
+    let two = bfs(board, src, card[1]) + bfs(board, card[1], card[0]) + 2;
+    for (let i = 0; i < 2; i++) board[card[i][0]][card[i][1]] = 0;
+    ret = Math.min(ret, one + permutation(board, card[1]));
+    ret = Math.min(ret, two + permutation(board, card[0]));
+    for (let i = 0; i < 2; i++) board[card[i][0]][card[i][1]] = num;
+  }
+  if (ret === Number.MAX_SAFE_INTEGER) return 0;
+  return ret;
+}
+function solution(board, r, c) {
+  return permutation(board, [r, c, 0]);
+}
+```
+
+### 매출 하락 최소화
+
+- [https://programmers.co.kr/learn/courses/30/lessons/72416](https://programmers.co.kr/learn/courses/30/lessons/72416)
+
+```jsx
+function solution(sales, links) {
+  let children = Array(sales.length + 1).fill(0);
+  let parents = Array(sales.length + 1);
+  for (let [pIndex, cIndex] of links) {
+    parents[cIndex] = pIndex;
+    children[pIndex]++;
+  }
+  let queue = [];
+  for (let i = 1; i < children.length; i++) {
+    if (children[i] === 0) queue.push(i);
+  }
+  let dp = {};
+  parents[1] = 0;
+  children[0] = 1;
+  while (children[0]) {
+    let cIndex = queue.shift();
+    let pIndex = parents[cIndex];
+    let sum = 0;
+    let min = 0;
+    if (dp[cIndex]) {
+      sum = dp[cIndex].reduce((sum, [select, nselect]) => sum + nselect, 0);
+      min = dp[cIndex].reduce(
+        (min, [select, nselect]) => Math.min(min, select - nselect),
+        sales[cIndex - 1]
+      );
+    }
+    if (!dp[pIndex]) dp[pIndex] = [];
+    dp[pIndex].push([sum + sales[cIndex - 1], sum + min]);
+    if (--children[pIndex] === 0) queue.push(pIndex);
+  }
+  return Math.min(dp[0][0][0], dp[0][0][1]);
+}
+```
