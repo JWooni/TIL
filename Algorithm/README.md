@@ -9,6 +9,7 @@
 5. 동적 계획법 (Dynamic programming)
 6. 최단 경로 (Shortest Path)
 7. 실전 문제 풀이
+8. 기출문제
 
 
 ### 공부 내용 및 일자 
@@ -20,4 +21,5 @@
 - 2021-10-12 [동적 계획법 (Dynamic programming)](./dynamicProgramming/README.md)
 - 2021-10-13 [최단 경로 (Shortest Path)](./shortestPath/README.md)
 - 2021-10-14 [실전 문제 풀이](./practiceQuestion/README.md)
+- 2021-10-16 [기출 문제](./previousQuestion/README.md)
 
