@@ -3,26 +3,27 @@
 ### 목차
 
 1. JavaScript 소개
-2. Variable and Constant(변수와 상수)
-3. Hoisting(호이스팅)
-4. DataType(자료형)
-5. Object(객체)
-6. 형 변환
-7. Operator(연산자)
-8. Scope
-9. 조건문
-10. 반복문
-11. Function(함수)
-12. Method
-13. Nember
-14. String
-15. Array(배열)
-16. 고차함수
-17. 생성자
-18. Collection
-19. Math
-20. Date
-21. 기본 문제 풀이
+2. ECMAScript
+3. Variable and Constant(변수와 상수)
+4. Hoisting(호이스팅)
+5. DataType(자료형)
+6. Object(객체)
+7. 형 변환
+8. Operator(연산자)
+9. Scope
+10. 조건문
+11. 반복문
+12. Function(함수)
+13. Method
+14. Nember
+15. String
+16. Array(배열)
+17. 고차함수
+18. 생성자
+19. Collection
+20. Math
+21. Date
+22. 기본 문제 풀이
 <!--
 7. Arrow Function (화살표 함수)
 8. DOM (문서 객체 모델)
@@ -33,6 +34,7 @@
 ### 공부 내용 및 일자 
 
 - 2021-09-24 [JavaScript 소개](./introduce/README.md)
+- 2021-10-18 [ECMAScript](./ecmaScript/README.md)
 - 2021-09-24 [Variable and Constant (변수와 상수)](./variable_constant/README.md)
 - 2021-09-24 [Hoisting](./hoisting/README.md)
 - 2021-09-24 [DataType (자료형)](./datatype/README.md)
