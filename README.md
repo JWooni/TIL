@@ -10,6 +10,6 @@
 - [Data Structure](./DataStructure)
 - [Algorithm](./Algorithm)
 - [Mission](./Mission)
-- [복습](./Review)
+- [Review](./Review)
 - [Node.js](./Node)
 - [Vue](./Vue)
