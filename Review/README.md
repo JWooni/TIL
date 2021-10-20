@@ -6,4 +6,4 @@
 
 ### 공부 내용 및 일자 
 
-- 2021-08-28 [Math](./math/README.md)
+- 2021-08-28~ing [Math](./math/README.md)
