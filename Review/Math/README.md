@@ -101,7 +101,7 @@
     	// 1. 재귀함수를 멈춰야할 조건
     	if (s == r) {
     		count++;
-    		console.log(arr);
+    		console.log(arr.join(" "));
     		return;
     	}
     
