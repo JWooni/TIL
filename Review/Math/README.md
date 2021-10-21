@@ -80,8 +80,8 @@
               continue;
             }
     
-    				console.log(arr[i], arr[j], arr[k]);
-    				count++;
+    		console.log(arr[i], arr[j], arr[k]);
+    		count++;
           }
         }
       }
