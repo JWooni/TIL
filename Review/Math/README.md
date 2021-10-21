@@ -66,7 +66,7 @@
     function permutation(arr) {
       // for i -> 첫번째 인덱스 위치 시킬 요소 a, b, c [i, 0, 0]
       for (let i = 0; i < arr.length; i++) {
-        // for j -> 두번째 인덱스 위치 시킬 요소	[i, j, 0]
+        // for j -> 두번째 인덱스 위치 시킬 요소 [i, j, 0]
         for (let j = 0; j < arr.length; j++) {
           if (i == j) {
             continue;
