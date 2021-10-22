@@ -110,38 +110,38 @@
     	  [arr[s], arr[i]] = [arr[i], arr[s]];	// swap
     	  permutation(arr, s + 1, r);
     	  [arr[s], arr[i]] = [arr[i], arr[s]];	// 원상복귀
-            /*
-            // abc
-            s = 0, r = 2, i = 0, 값 = ["a"]
-            s = 1, r = 2, i = 1, 값 = ["a", "b"]
-            s = 2, r = 2, 값 = ["a", "b", "c"], count++, return
-            원복 arr = ["a", "b",]
+          /*
+          // abc
+          s = 0, r = 2, i = 0, 값 = ["a"]
+          s = 1, r = 2, i = 1, 값 = ["a", "b"]
+          s = 2, r = 2, 값 = ["a", "b", "c"], count++, return
+          원복 arr = ["a", "b",]
 
-            // acb
-            s = 1, r = 2, i = 2, 값 = ["a", "c", "b"]
-            s = 2, r = 2, 값 = ["a", "c", "b"], count++, return
-            원복 arr = ["a", "b", "c"]
+          // acb
+          s = 1, r = 2, i = 2, 값 = ["a", "c", "b"]
+          s = 2, r = 2, 값 = ["a", "c", "b"], count++, return
+          원복 arr = ["a", "b", "c"]
 
-            // bac
-            s = 0, r = 2, i = 1, 값 = ["b", "a"]
-            s = 1, r = 2, i = 1, 값 = ["b", "a"]
-            s = 2, r = 2, 값 = ["b", "a", "c"], count++, return
-            원복 arr = ["b", "a", "c"]
+          // bac
+          s = 0, r = 2, i = 1, 값 = ["b", "a"]
+          s = 1, r = 2, i = 1, 값 = ["b", "a"]
+          s = 2, r = 2, 값 = ["b", "a", "c"], count++, return
+          원복 arr = ["b", "a", "c"]
 
-            // bca
-            s = 1, r = 2, i = 2, 값 = ["b", "c", "a"]
-            s = 2, r = 2, 값 = ["b", "c", "a"], count++, return
-            원복 arr = ["b", "a", "c"]
+          // bca
+          s = 1, r = 2, i = 2, 값 = ["b", "c", "a"]
+          s = 2, r = 2, 값 = ["b", "c", "a"], count++, return
+          원복 arr = ["b", "a", "c"]
 
-            // cba
-            s = 0, r = 2, i = 2, 값 = ["c" ,"a" ,"b"]
-            s = 1, r = 2, i = 2, 값 = ["c" ,"b" ,"a"]
-            s = 2, r = 2, 값 = ["c" ,"b" ,"a"], count++, return
-            원복 arr = ["c", "a", "b"]
+          // cba
+          s = 0, r = 2, i = 2, 값 = ["c" ,"a" ,"b"]
+          s = 1, r = 2, i = 2, 값 = ["c" ,"b" ,"a"]
+          s = 2, r = 2, 값 = ["c" ,"b" ,"a"], count++, return
+          원복 arr = ["c", "a", "b"]
 
-            // cab
-            s = 2, r = 2, i = 2, 값 = ["c", "a", "b"], count++, return
-            */
+          // cab
+          s = 2, r = 2, i = 2, 값 = ["c", "a", "b"], count++, return
+          */
     	}
     }
     
