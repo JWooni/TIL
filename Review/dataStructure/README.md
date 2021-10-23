@@ -89,3 +89,96 @@
         console.log(fruits); // [ 'apple', <1 empty item>, 'melon' ]
         console.log(fruits.length); // 3
         ```
+
+- 배열 조작
+    - 배열 추가/삭제(LIFO-Back)
+        - 배열 추가 : Array.push(element)
+        - 배열 삭제 : Array.pop()
+        
+        ```jsx
+        let fruits = ["apple", "orange", "melon"];
+        ret = fruits.push("watermelon");
+        
+        console.log(fruits); // [ 'apple', 'kiwi', 'melon', 'watermelon' ]
+        console.log(ret); // 4
+        
+        ret = fruits.pop();
+        console.log(fruits); // [ 'apple', 'kiwi', 'melon' ]
+        console.log(ret); // watermelon
+        ```
+        
+    
+- 배열 추가/삭제(LIFO-Front)
+    - 배열 추가 : Array.unshift(element)
+    - 배열 삭제 : Array.shift()
+    
+    ```jsx
+    let fruits = ["apple", "orange", "melon"];
+    ret = fruits.shift();
+    
+    console.log(fruits); // [ 'orange', 'melon' ]
+    console.log(ret); // apple
+    
+    ret = fruits.unshift("watermelon");
+    console.log(fruits); // [ 'watermelon', 'orange', 'melon' ]
+    console.log(ret); // 3
+    ```
+    
+- 배열 삭제/변경(index)
+    - 배열 요소 삭제/변경 : Array.splice(index[, deleteCount, elem1, ..., elemN])
+    
+    ```jsx
+    let fruits = ["apple", "orange", "melon"];
+    console.log(fruits.splice(1)); // [ 'orange', 'melon' ]
+    console.log(fruits); // [ 'apple' ]
+    
+    fruits = ["apple", "orange", "melon", "strawberry"];
+    console.log(fruits.splice(1, 1)); // [ 'orange' ]
+    console.log(fruits); // [ 'apple', 'melon', 'strawberry' ]
+    console.log(fruits.splice(1, 1, "mango", "kiwi")); // [ 'melon' ]
+    console.log(fruits); // [ 'apple', 'mango', 'kiwi', 'strawberry' ]
+    ```
+    
+- 배열 삭제(index)
+    - 배열 요소 삭제 : Array.slice([start], [end])
+
+    ```jsx
+    let fruits = ["apple", "orange", "melon"];
+
+    console.log(fruits.slice(1)); // [ 'orange', 'melon' ]
+    console.log(fruits); // [ 'apple', 'orange', 'melon' ]
+    console.log(fruits.slice(1, 2)); // [ 'orange' ]
+    console.log(fruits.slice(-2)); // [ 'orange', 'melon' ]
+    ```
+
+- 배열 병합
+    - 다중 배열 병합 : Array.concat(arg1, arg2...)
+
+    ```jsx
+    let fruits = ["apple", "orange", "melon"];
+
+    console.log(fruits.concat("strawberry")); // [ 'apple', 'orange', 'melon', 'strawberry' ]
+    console.log(fruits.concat(["cherry", "banana"])); // [ 'apple', 'orange', 'melon', 'cherry', 'banana' ]
+    console.log(fruits.concat(["cherry", "banana"], "mango")); // [ 'apple', 'orange', 'melon', 'cherry', 'banana', 'mango' ]
+    ```
+- 배열 반복문
+    - 다양한 반복문 문법을 통해 배열 요소에 접근 가능
+    - 반복문 문법 : for ... length(index 접근), for ... of (element 접근), for ... in (key 접근)
+
+    ```jsx
+    let fruits = ["apple", "orange", "melon"];
+    // 1. use for (index)
+    for (let i = 0; i < fruits.length; i++) {
+        console.log(fruits[i]); // apple, orange, melon
+    }
+
+    // 2. use for ...(element) of
+    for (let fruit of fruits) {
+        console.log(fruit); // apple, orange, melon
+    }
+
+    // 3. use for ...(key) in
+    for (let key in fruits) {
+        console.log(fruits[key]); // apple, orange, melon
+    }
+    ```
