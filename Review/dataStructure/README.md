@@ -182,3 +182,65 @@
         console.log(fruits[key]); // apple, orange, melon
     }
     ```
+
+- 배열 탐색 / 변형
+    - 배열 탐색
+        - index 탐색(앞에서 부터) : Array.indexOf(item, from)
+        - index 탐색(뒤에서 부터) : Array.lastIndexOf(item, from)
+        - 값 포함 여부 확인 : Array.includes(item, from)
+        
+        ```jsx
+        let fruits = ["apple", "orange", "banana", "orange", "melon"];
+        
+        console.log(fruits.indexOf("orange")); // 1
+        console.log(fruits.indexOf("Orange")); // -1
+        console.log(fruits.indexOf("orange", 2)); // 3
+        console.log(fruits.lastIndexOf("orange")); // 3
+        console.log(fruits.lastIndexOf("orange", -3)); // 1
+        console.log(fruits.lastIndexOf("orange", 0)); // -1
+        console.log(fruits.includes("banana")); // true
+        console.log(fruits.includes("Banana")); // false
+        console.log(fruits.includes(0)); // false
+        ```
+        
+    - 배열 변형
+        - 배열 정렬
+            - 배열 정렬 : Array.sort()
+            - 배열 반전 : Array.reverse()
+
+```jsx
+let nums = [1, -1, 4, 5, 2, 0];
+console.log(nums.sort()); // [ -1, 0, 1, 2, 4, 5 ]
+console.log(nums.reverse()); // [ 5, 4, 2, 1, 0, -1 ]
+
+let fruits = ["apple", "orange", "banana", "melon"];
+console.log(fruits.sort()); // [ 'apple', 'banana', 'melon', 'orange' ]
+console.log(fruits.reverse()); // [ 'orange', 'melon', 'banana', 'apple' ]
+```
+
+- 배열 변환
+    - 배열 값을 문자열로 변환 : Array.join(separator)
+
+```jsx
+// 배열 변환
+let fruits = ["apple", "orange", "banana", "melon"];
+let str = fruits.join();
+console.log(str); // apple,orange,banana,melon
+
+let str_separator = fruits.join(";");
+console.log(str_separator); // apple;orange;banana;melon let result = str_separator.split(";");
+console.log(result); // [ 'apple', 'orange', 'banana', 'melon' ]
+
+```
+
+- 배열 반복
+    - sort()
+        - sort() 함수의 매개변수로 함수를 넣어 고차함수를 이용한 정렬 수행 가능
+            - before
+
+```jsx
+let nums = [1, -1, 4, 0, 10, 20, 12];
+
+console.log(nums.sort()); // [ -1, 0, 1, 10, 12, 20, 4 ]
+console.log(nums.reverse()); // [ 4, 20, 12, 10, 1,  0, -1 ]
+```
