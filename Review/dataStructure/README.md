@@ -238,18 +238,19 @@ console.log(result); // [ 'apple', 'orange', 'banana', 'melon' ]
         - sort() 함수의 매개변수로 함수를 넣어 고차함수를 이용한 정렬 수행 가능
             - before
 
-```jsx
-let nums = [1, -1, 4, 0, 10, 20, 12];
+        ```jsx
+        let nums = [1, -1, 4, 0, 10, 20, 12];
 
-console.log(nums.sort()); // [ -1, 0, 1, 10, 12, 20, 4 ]
-console.log(nums.reverse()); // [ 4, 20, 12, 10, 1,  0, -1 ]
-```
-            - after
+        console.log(nums.sort()); // [ -1, 0, 1, 10, 12, 20, 4 ]
+        console.log(nums.reverse()); // [ 4, 20, 12, 10, 1,  0, -1 ]
+        ```
+        
+        - after
 
-```jsx
-let ascending_order = function (x, y) { return x - y; };
-let descending_order = function (x, y) { return y - x; };
-let nums = [1, -1, 4, 0, 10, 20, 12]; 
-console.log(nums.sort(ascending_order)); // [ -1,  0,  1, 4, 10, 12, 20] 
-console.log(nums.sort(descending_order)); // [ 20, 12, 10, 4, 1, 0, -1 ]
-```
+        ```jsx
+        let ascending_order = function (x, y) { return x - y; };
+        let descending_order = function (x, y) { return y - x; };
+        let nums = [1, -1, 4, 0, 10, 20, 12]; 
+        console.log(nums.sort(ascending_order)); // [ -1,  0,  1, 4, 10, 12, 20] 
+        console.log(nums.sort(descending_order)); // [ 20, 12, 10, 4, 1, 0, -1 ]
+        ```
