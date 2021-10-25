@@ -446,3 +446,32 @@ console.log(every_age); // true
 let empty = [].every((item) => item > 16);
 console.log(empty); // true
 ```
+
+## N차원 배열
+
+- 배열(Array)안에 N개 만큼의 배열이 존재하는 객체
+- 2/3차원 지도 정보, RGB를 저장하는 2차원 사진 파일 등을 표현할 때 활용 가능
+- 2차원 배열은 array[N][M}으로 접근하며, 배열(Array) 전체를 push(), pop() 가능
+
+```jsx
+let array = [ [101, 102, 103], [201, 202, 203], [301, 302, 303], ];
+console.log(array); // [ [ 101, 102, 103 ], [ 201, 202, 203 ], [ 301, 302, 303 ] ]
+console.log(array[0]); // [ 101, 102, 103 ]
+console.log(array[1][0]); // 201
+console.log(array[2][2]); // 303
+let arr_2 = array.pop();
+console.log(array.length); // 2
+console.log(arr_2); // [ 301, 302, 303 ]
+console.log(array); // [ [ 101, 102, 103 ], [ 201, 202, 203 ] ]
+let array_num = array.push([401, 402, 403]);
+console.log(array.length); // 3
+console.log(array_num); // 3
+console.log(array); // [ [ 101, 102, 103 ], [ 201, 202, 203 ], [ 401, 402, 403 ] ]
+for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array[i].length; j++) { 
+        array[i][j] += 1000;
+        console.log(array[i][j]); 
+    }
+}
+/* 1101 ... 1403 */
+```
