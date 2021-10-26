@@ -476,6 +476,7 @@ for (let i = 0; i < array.length; i++) {
 /* 1101 ... 1403 */
 ```
 
+
 # 배열 문제 풀이
 
 ## 수열 최소값 위치
@@ -485,7 +486,7 @@ for (let i = 0; i < array.length; i++) {
     - 입력은 자연수로된 배열을 받고, 시작 위치는 0으로 계산하여 최소값의 위치를 배열로 반환한다.
     - 모든 수는 100이하의 자연수로 입력 받는다.
 
-```
+```jsx
 function answer(nums) {
     let result = [];
     let min = Number.MAX_SAFE_INTEGER;
@@ -516,7 +517,7 @@ function answer(nums) {
     - 기물의 개수는 배열 형태로 아래와 같이 king부터 pawsn순으로 들어오며 한 게임을 하귀 위해 필요한 기물의 개수를 아래와 같다.
         - 순서 및 기물 필요 개수 : king(1), queen(1), rooks(2), bishops(2), knights(2), pawns(8)
 
-```
+```jsx
 function answer(chess) {
     let result = [];
     let refer = [1, 1, 2, 2, 2, 8];
@@ -536,7 +537,7 @@ function answer(chess) {
     - 입력은 정수로 된 배열을 받고,최대합이 나올 수 있는 두 수를 배열 형태로 반환한다.
     - 배열로 입력되는 정수는 10 ~ 20개 사이이며, 정수의 범위는 -20 ~ +20 사이의 값이 입력된다.
 
-```
+```jsx
 function answer(nums) {
     let result = [];
     result = nums[0] > nums[1] ? [nums[0], nums[1]] : [nums[1], nums[0]];
@@ -560,7 +561,7 @@ function answer(nums) {
     - 모든 난장이의 가슴에는 숫자가 표시된 배치가 있는데, 다행히도 일곱 난장이의 배지에 표시된 숫자의 합이 100이라는 단서로 입곱 난장이를 분별할 수 있디ㅏ. 일곱 난장이를 분별하는 프로그램을 작성하시오.
     - 배지 값은 100 이하 자연수로 들어오며, 일곱 난장이의 배지 값을 기존 순서대로 배열에 넣어 반환한다.
 
-```
+```jsx
 function answer(dwarf) {
     let result = []; // calc sum
     let sum = 0;
@@ -603,7 +604,7 @@ function answer(dwarf) {
     - 자연수를 높이로 입력 받고 대칭형 형태로 나무 문자열을 만들어 반환한다.
     - 각 행 별로 개행 문자(\n)를 넣어주면서 *을 찍으며 출력 값 형태로 나무를 그려준다.
 
-```
+```jsx
 function answer(height) {
     let str = "\\n";
 
@@ -628,7 +629,7 @@ function answer(height) {
     - 각 입력에 정확히 하나의 솔루션이 있다고 가정하고, 동일한 요소를 두 번 사용하지 않는다.
     - 배열의 index는 오름차순으로 정렬하여 반환한다.
 
-```
+```jsx
 function answer(nums, target) {
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++){
@@ -649,7 +650,7 @@ function answer(nums, target) {
     - 진행자를 위해 채점표를 보고 점수를 산출해주는 프로그램을 제작하시오.
     - 배열 형태의 채점 값이 1(정답), 0(오답)으로 입력되며, 점수의 합계를 반환한다.
 
-```
+```jsx
 function answer(mark) {
     let result = 0; let score = 0;
     for (let i = 0; i < mark.length; i++) {
@@ -672,7 +673,7 @@ function answer(mark) {
     - 입력은 배열 형태의 정수이며, 같은 높이를 맞추기 위해 옮겨야 하는 벽돌의 개수를 반환한다.
     - 단, 입력으로 들어오는 배열은 남는 벽돌없이 높이가 딱 나눠 떨어지도록 들어온다.
 
-```
+```jsx
 function answer(blocks) {
     let result = 0;
     let avg = 0;
@@ -699,7 +700,7 @@ function answer(blocks) {
     - 예를 들어 129와 137이 주어졌을 때, 129, 130, 131, 132, 133, 134, 135, 136, 137 숫자가 나오고 이 숫자들의 자릿수 별 숫자 빈도수를 계산하여, 0부터 9까지의 빈도수 값을 반환한다.
     - 입력 값은 M, N은 10,000 이하의 자연수이며, 0부터 9까지의 자릿수 별 빈도수를 배열 형태로 반환한다.
 
-```
+```jsx
 function answer(s, e) {
     let result = []; // init
     for (let i = 0; i < 10; i++) {
@@ -725,7 +726,7 @@ function answer(s, e) {
     - 이를 위해 정사각형 모양의 달팽이 2차원 배열을그려주는 함수를 작성하시오.
     - 입력한 크기의 정사각형으로, 시계바향으로 돌면서 숫자를 채워 2차원 배열을 반환한다.
 
-```
+```jsx
 function answer(length) {
     let result = [];
 
@@ -754,57 +755,5 @@ function answer(length) {
     }
     return result;
 }
-
-```
-
----
-
-# Prototype
-
-- 어떠한 객체가 만들어지기 위해 객체의 모태가 되는 원형
-- 자바스크립트는 일반적인 객체지향 언어와는 다르게, 프로토타입을 이용한 복사(Cloning)을 통해 새로운 객체 생성
-- 일반적인 객체 생성 방식 : 속성 생성자, 메서드는 프로토타입에서 정의
-
-```
-// 생성자에서 속성 정의
-
-function Test(a, b) {
-    // 속성 정의
-}
-
-// 첫 메서드 정의
-Test.prototype.x = function() { … };
-
-// 두번째 메서드 정의
-Test.prototype.y = function() { ... };
-
-// 객체 생성
-let test = new Test(1, 2);
-
-```
-
-## 프로토타입 예제
-
-- prototype을 이용하여 Person 객체에 메서드 추가
-
-```
-// 생성자 속성 정의
-function Person(name, age) {
-    this.name = name;
-    this.age = age;
-}
-
-// prototype을 이용한 Person 메서드 정의
-Person.prototype.isAudlt = function () {
- return this.age > 18;
-};
-
-// 객체 생성
-const p1 = new Person("bob", 26);
-const p2 = new Person("alice", 16);
-
-// 객체 메서드 호출
-console.log(p1.isAudlt()); // true
-console.log(p2.isAudlt()); // false
 
 ```
