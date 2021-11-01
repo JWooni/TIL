@@ -1,6 +1,6 @@
 ## 수박수박수박수박수박수?
 
-[문제](https://programmers.co.kr/learn/courses/30/lessons/12921)
+[문제](https://programmers.co.kr/learn/courses/30/lessons/12922)
 
 - 풀이
 
