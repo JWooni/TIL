@@ -165,19 +165,31 @@ const h1 = document.querySelector("div.hello:first-child h1");
 // title.innerHTML = "Hello!";
 
 // step3. 그 event에 반응해라
-function handleTitleClick() {
-  const currentColor = h1.style.color;
-  let newColor;
-  if (currentColor === "blue") {
-    newColor = "tomato";
-  } else {
-    newColor = "blue";
-  }
-  h1.style.color = newColor;
-}
+// function handleTitleClick() {
+// const currentColor = h1.style.color;
+// let newColor;
+// if (currentColor === "blue") {
+//   newColor = "tomato";
+// } else {
+//   newColor = "blue";
+// }
+// h1.style.color = newColor;
+// }
 
 // step2. event를 listen해라
 h1.addEventListener("click", handleTitleClick);
+
+function handleTitleClick() {
+  h1.classList.toggle("clicked");
+}
+
+// function handleTitleClick() {
+//   if (h1.classList.contains(clickedClass)) {
+//     h1.classList.remove(clickedClass);
+//   } else {
+//     h1.classList.add(clickedClass);
+//   }
+// }
 
 // function handleMouseEnter() {
 //   h1.innerText = "Mouse is here!";
