@@ -9,6 +9,7 @@ function solution(dartResult) {
   let answer = 0;
   let score = 0;
   let cnt = [];
+  
   for (let i = 0; i < dartResult.length; i++) {
     //점수가 주어질때 
     if (!isNaN(dartResult[i])) {
@@ -33,6 +34,7 @@ function solution(dartResult) {
     cnt[cnt.length - 1] = -1 * cnt[cnt.length - 1];
   }
 }
+
 //3개의 점수 합산 
 answer = cnt.reduce((acc, cur) => acc + cur, 0);
 return answer; 
