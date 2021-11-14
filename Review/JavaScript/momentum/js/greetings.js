@@ -1,5 +1,6 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+// querySelector는 가장 첫번째 요소만을 선택 = 첫번째 input(text)의 값을 .value로 가져올 수 있다.
 const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
